@@ -6,6 +6,8 @@
 - Created repository and created front-end and back-end branches plus RepositoryBranch and started work on the api, ER-Diagram almost done.
 
 ## Eric
+### 31/05/2021
+Started adding models for items in the webshop and for users
 
 ## Rasmus
 ### 31/05/2021 - Mandag
