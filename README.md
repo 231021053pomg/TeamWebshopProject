@@ -2,6 +2,7 @@
 
 # Logbog
 ## Patrick
+### 31/05/2021
 - Created repository and created front-end and back-end branches plus RepositoryBranch and started work on the api, ER-Diagram almost done.
 
 ## Eric
