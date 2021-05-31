@@ -7,7 +7,7 @@
 ## Eric
 
 ## Rasmus
-# 31/05/2021 - Mandag
+### 31/05/2021 - Mandag
 <ul>
 	<li>Created new branch named NavbarBranch</li>
 	<li>Slowly starting with creating a navbar for use</li>
