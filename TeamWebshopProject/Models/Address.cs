@@ -8,9 +8,6 @@ namespace TeamWebshopProject.API.Models
 {
     public class Address
     {
-        [Key]
-        public int Id { get; set; }
-
         [Required]
         public int PostCode { get; set; }
 
