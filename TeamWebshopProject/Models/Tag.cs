@@ -11,6 +11,8 @@ namespace TeamWebshopProject.API.Models
         [Key]
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        [Required]
+        [StringLength(10)]
+        public string TagName { get; set; }
     }
 }

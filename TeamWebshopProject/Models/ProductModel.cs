@@ -14,6 +14,8 @@ namespace TeamWebshopProject.API.Models
             Tags = new();
         }
 
+        [Required]
+        [StringLength(32, ErrorMessage = "Title can not be longer than 32 chars")]
         public string Title { get; set; }
 
         public byte[] Image { get; set; }

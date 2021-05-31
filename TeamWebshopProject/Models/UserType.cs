@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace TeamWebshopProject.API.Models
 {
-    public class Merch : ProductModel
+    public class UserType
     {
-        [Required]
-        public decimal Weight { get; set; }
+        [Key]
+        public int Id { get; set; }
 
         [Required]
-        public decimal Volume { get; set; }
+        [StringLength(10)]
+        public string TypeIdentity { get; set; }
     }
 }
