@@ -1,4 +1,4 @@
-# TeamWebshopProject ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+# TeamWebshopProject ![alt text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.deviantart.com%2Fhauntedaccount%2Fart%2FUltra-Rare-Pepe-for-Sale-543559665&psig=AOvVaw02gxKbAH_WjxwLyBm_XoyC&ust=1622542111679000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjRnsPW8_ACFQAAAAAdAAAAABAD "Logo Title Text 1")
 
 # Logbog
 ## Patrick
