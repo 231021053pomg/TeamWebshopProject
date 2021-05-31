@@ -12,5 +12,4 @@
 <ul>
 	<li>Created new branch named NavbarBranch</li>
 	<li>Slowly starting with creating a navbar for use</li>
-	<li></li>
 </ul>
