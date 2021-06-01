@@ -16,14 +16,16 @@ namespace TeamWebshopProject.API.Models
         [Key]
         public int Id { get; set; }
 
+        [Required]
         public string ItemType { get; set; }
 
-        public int Quantity { get; set; }
-
+        [Required]
         public decimal Price { get; set; }
 
         public decimal Discount { get; set; }
 
+        [Required]
+        [StringLength(5000, ErrorMessage = "Item description can not be more than 5000 chars")]
         public string Discription { set; get; }
 
         public string Image { get; set; }
