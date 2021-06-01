@@ -22,7 +22,7 @@ Started adding models for items in the webshop and for users
 
 ### 01/06/2021 - Tirsdag
 <ul>
-	<li>The teacher did a walk through of how the tables could look like in our database</li>
+	<li>The teacher did a walkthrough of how the tables could look like in our database</li>
 	<li>Recreated Navbranch as there were some problems with earlier version - all fixed now though</li>
 	<li>Skeleton of navbar created with HTML/CSS - will be improved on later so it is ready for use</li>
 </ul>
