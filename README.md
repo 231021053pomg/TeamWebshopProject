@@ -16,3 +16,10 @@ Started adding models for items in the webshop and for users
 	<li>Slowly starting with creating a navbar for use</li>
 	
 </ul>
+
+### 01/06/2021
+<ul>
+	<li>The teacher did a walk through of how the tables could look like in our database</li>
+	<li>Recreated Navbranch as there were some problems with earlier version - all fixed now though</li>
+	<li>Skeleton of navbar created with HTML/CSS - will be improved on later so it is ready for use</li>
+</ul>
