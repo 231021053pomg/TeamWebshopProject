@@ -12,7 +12,6 @@
     <Folder Include="CSRD\Controllers\" />
     <Folder Include="CSRD\Database\" />
     <Folder Include="CSRD\Services\" />
-    <Folder Include="CSRD\Repository\" />
   </ItemGroup>
 
 </Project>
