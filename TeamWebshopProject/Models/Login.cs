@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace TeamWebshopProject.API.Models
 {
-    public class Tag
+    public class Login
     {
         [Key]
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public string AccessType { get; set; }
+
+        public string Email { set; get; }
+
+        public string Password { get; set; }
+
     }
 }

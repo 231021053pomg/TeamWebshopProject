@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace TeamWebshopProject.API.Models
 {
-    public class Tag
+    public class Credit
     {
         [Key]
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        [Required]
+        public Customer Customer { get; set; }
+
+        public int? CreditAmount { get; set; }
     }
 }

@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace TeamWebshopProject.API.Models
 {
-    public class Merch : ProductModel
+    public class Delivery
     {
-        [Required]
-        public decimal Weight { get; set; }
+        [Key]
+        public int Id { get; set; }
 
-        [Required]
-        public decimal Volume { get; set; }
+        public Order Order { get; set; }
+
+        public string Status { get; set; }
+
     }
 }

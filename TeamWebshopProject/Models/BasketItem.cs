@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace TeamWebshopProject.API.Models
 {
-    public class Tag
+    public class BasketItem
     {
         [Key]
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public Basket Basket { get; set; }
+
+        public Item Item { get; set; }
+
+        public int Quantity { get; set; }
     }
 }

@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace TeamWebshopProject.API.Models
 {
-    public class Meme : ProductModel
+    public class Order
     {
-        [Required]
-        public int PixelHeight { get; set; }
+        [Key]
+        public int Id { get; set; }
 
-        [Required]
-        public int PixelLenght { get; set; }
+        public Customer Customer { get; set; }
+
+        public decimal Price { get; set; }
     }
 }
