@@ -9,6 +9,11 @@
 - Started creation of Repositories and Services, merged branches to newest updated solution files and fixed angular project so it works correctly now.
 
 ## Eric
+### 01/06/2021
+Worked out ER-diagram 
+Re-wrote most of the models and data annotations
+Added entity framework NuGet packages
+
 ### 31/05/2021
 Started adding models for items in the webshop and for users
 
