@@ -9,8 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CSRD\Controllers\" />
-    <Folder Include="CSRD\Database\" />
+    <Folder Include="CSRD\Database\Migrations\" />
   </ItemGroup>
 
 </Project>
