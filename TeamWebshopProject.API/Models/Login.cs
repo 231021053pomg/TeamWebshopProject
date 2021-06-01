@@ -11,10 +11,14 @@ namespace TeamWebshopProject.API.Models
         [Key]
         public int Id { get; set; }
 
+        [Required]
         public string AccessType { get; set; }
 
+        [Required]
         public string Email { set; get; }
 
+        [Required]
+        [MinLength(8, ErrorMessage = "Password must be 8 characters or more")]  
         public string Password { get; set; }
 
     }
