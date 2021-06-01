@@ -17,7 +17,7 @@ Started adding models for items in the webshop and for users
 	
 </ul>
 
-### 01/06/2021
+### 01/06/2021 - Tirsdag
 <ul>
 	<li>The teacher did a walk through of how the tables could look like in our database</li>
 	<li>Recreated Navbranch as there were some problems with earlier version - all fixed now though</li>
