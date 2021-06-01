@@ -11,10 +11,13 @@ namespace TeamWebshopProject.API.Models
         [Key]
         public int Id { get; set; }
 
+        [Required]
         public Order Order { get; set; }
 
+        [Required]
         public Item Item { get; set; }
 
+        [Required]
         public decimal Quantity { get; set; }
     }
 }

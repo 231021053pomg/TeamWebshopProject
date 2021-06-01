@@ -14,6 +14,6 @@ namespace TeamWebshopProject.API.Models
         [Required]
         public Customer Customer { get; set; }
 
-        public int? CreditAmount { get; set; }
+        public int CreditAmount { get; set; }
     }
 }
