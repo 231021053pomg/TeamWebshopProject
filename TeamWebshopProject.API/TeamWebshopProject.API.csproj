@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <Folder Include="CSRD\Database\Migrations\" />
+    <Folder Include="Database\Migrations\" />
   </ItemGroup>
 
 </Project>

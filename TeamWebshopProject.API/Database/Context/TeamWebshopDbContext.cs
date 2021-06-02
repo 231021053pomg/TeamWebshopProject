@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TeamWebshopProject.API.Models;
 
-namespace TeamWebshopProject.API.Database
+namespace TeamWebshopProject.API.Database.Context
 {
     public class TeamWebshopDbContext : DbContext
     {
