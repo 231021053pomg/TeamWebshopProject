@@ -1,11 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+
+using TeamWebshopProject.API.Models;
 
 namespace TeamWebshopProject.API.CSRD.Repository.Interfaces
 {
-    interface IOrderItemRepository
+    public interface IOrderItemRepository
     {
+        Task<List<OrderItem>> GetOrderItemsList();
+
+        Task<OrderItem> GetOrderItem(int id);
+
+        Task<OrderItem> GetOrderItemQuantity();
     }
 }

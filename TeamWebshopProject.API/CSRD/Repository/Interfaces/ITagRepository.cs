@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+
+using TeamWebshopProject.API.Models;
+
 
 namespace TeamWebshopProject.API.CSRD.Repository.Interfaces
 {
-    interface ITagRepository
+    public interface ITagRepository
     {
+        Task<List<Tag>> GetTagsList();
 
+        Task<Tag> GetTag(int id);
+
+        Task<Tag> GetName();
     }
 }

@@ -1,11 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+
+using TeamWebshopProject.API.Models;
 
 namespace TeamWebshopProject.API.CSRD.Repository.Interfaces
 {
-    interface ILoginRepository
+    public interface ILoginRepository
     {
+        Task<Login> GetLoginId(int id);
+
+        Task<Login> GetLoginAccessType();
+
+        Task<Login> GetLoginEmail();
+
+        Task<Login> GetLoginPassword();
     }
 }

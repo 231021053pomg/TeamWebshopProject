@@ -1,11 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+
+using TeamWebshopProject.API.Models;
 
 namespace TeamWebshopProject.API.CSRD.Repository.Interfaces
 {
-    interface IBasketItemRepository
+    public interface IBasketItemRepository
     {
+        Task<List<BasketItem>> GetBasketItems();
+
+        Task<BasketItem> GetBasketItem(int id);
+
+        Task<BasketItem> GetBasketItemQuantity();
     }
 }
