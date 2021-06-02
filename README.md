@@ -5,8 +5,11 @@
 ### 31/05/2021
 - Created repository and created front-end and back-end branches plus RepositoryBranch and started work on the api, ER-Diagram almost done.
 
-### 1/06/2021
+### 01/06/2021
 - Started creation of Repositories and Services, merged branches to newest updated solution files and fixed angular project so it works correctly now.
+
+### 02/06/2021
+- Continued work of Reposiotries
 
 ## Eric
 ### 01/06/2021
