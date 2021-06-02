@@ -21,8 +21,7 @@
 ### 31/05/2021 - Mandag
 <ul>
 	<li>Created new branch named NavbarBranch</li>
-	<li>Slowly starting with creating a navbar for use</li>
-	
+	<li>Slowly starting with creating a navbar for use</li>	
 </ul>
 
 ### 01/06/2021 - Tirsdag
@@ -31,3 +30,10 @@
 	<li>Recreated Navbranch as there were some problems with earlier version - all fixed now though</li>
 	<li>Skeleton of navbar created with HTML/CSS - will be improved on later so it is ready for use</li>
 </ul>
+
+### 02/06/2021 - Onsdag
+<ul>
+	<li>Had a mornining talk with teacher, where we talked about how far we were as of now</li>
+	<li>Kept working on the header / navbar --- nearly done</li>
+</ul>
+	
