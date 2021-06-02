@@ -99,7 +99,6 @@ namespace TeamWebshopProject.Test.CSRD.Repository
         public async Task Create_Success_Test()
         {
             // Arrange
-            int expectedCount = 4;
             BasketItem newItem = new BasketItem { 
                 Id = 10,
                 Basket = new Basket { Id = 1 },
@@ -110,18 +109,52 @@ namespace TeamWebshopProject.Test.CSRD.Repository
 
             // Act
             var result = await basketItemRepository.Create(newItem);
-            var getAll = await basketItemRepository.GetAll();
 
             // Assert
             Assert.NotNull(result);
-            Assert.Equal(expectedCount, getAll.Count());
+            Assert.NotEqual(DateTime.MinValue, result.CreatedAt);
         }
         #endregion
 
         #region Update
+        [Fact]
+        public async Task Update_Success_Test()
+        {
+            // Arrange
+            BasketItemRepository basketItemRepository = new(_context);
+            BasketItem updatedBasketItem = new BasketItem
+            {
+                Id = 1,
+                Basket = new Basket { Id = 1 },
+                Item = new Item { Id = 5 },
+                Quantity = 9000
+            };
+
+            // Act
+            var result = await basketItemRepository.Update(updatedBasketItem.Id, updatedBasketItem);
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.NotEqual(DateTime.MinValue, result.EditedAt);
+            Assert.Equal(updatedBasketItem.Quantity, result.Quantity);
+        }
         #endregion
 
         #region Delete
+        [Fact]
+        public async Task Delete_Success_Test()
+        {
+            // Arrange
+            BasketItemRepository basketItemRepository = new(_context);
+            int id = 1;
+
+            // Act
+            var result = await basketItemRepository.Delete(id);
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.NotEqual(DateTime.MinValue, result.DeletedAt);
+        }
         #endregion
     }
 }
