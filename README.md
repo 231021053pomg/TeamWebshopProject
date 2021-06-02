@@ -12,6 +12,11 @@
 - Continued work of Reposiotries
 
 ## Eric
+### 02/06/2021
+- Finished up database migration
+- Added basemodel with created, edited and deleted dates
+- Started working on test for repositories
+
 ### 01/06/2021
 - Worked out ER-diagram 
 - Re-wrote most of the models and data annotations
