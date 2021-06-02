@@ -7,20 +7,14 @@ namespace TeamWebshopProject.API.CSRD.Repository.Interfaces
 {
     public interface IItemRepository
     {
-        Task<List<Item>> GetItemsList();
+        Task<List<Item>> GetAll();
 
-        Task<Item> GetItem(int id);
+        Task<Item> Get(int id);
 
-        Task<Item> GetItemType();
+        Task<Item> Create(Item Item);
 
-        Task<Item> GetItemPrice();
+        Task<Item> Update(int id, Item item);
 
-        Task<Item> GetItemDiscount();
-
-        Task<Item> GetItemDiscription();
-
-        Task<Item> GetItemImage();
-
-        Task<Item> GetItemTags();
+        Task<Item> Delete(int id);
     }
 }

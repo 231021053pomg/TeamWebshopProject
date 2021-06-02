@@ -7,12 +7,14 @@ namespace TeamWebshopProject.API.CSRD.Repository.Interfaces
 {
     public interface IDeliveryRepository
     {
-        Task<List<Delivery>> GetDeliveriesList();
+        Task<List<Delivery>> GetAll();
 
-        Task<Delivery> GetDelivery(int id);
+        Task<Delivery> Get(int id);
 
-        Task<Order> GetOrder();
+        Task<Delivery> Create(Delivery delivery);
 
-        Task<Delivery> GetDeliveryStatus();
+        Task<Delivery> Update(int id, Delivery delivery);
+             
+        Task<Delivery> Delete(int id);
     }
 }

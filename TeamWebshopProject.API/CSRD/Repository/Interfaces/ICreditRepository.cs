@@ -7,10 +7,14 @@ namespace TeamWebshopProject.API.CSRD.Repository.Interfaces
 {
     public interface ICreditRepository
     {
-        Task<List<Credit>> GetCreditList();
+        Task<List<Credit>> GetAll();
 
-        Task<Credit> GetCreditId(int id);
+        Task<Credit> Get(int id);
 
-        Task<Credit> GetCreditAmount();
+        Task<Credit> Create(Credit credit);
+
+        Task<Credit> Update(int id, Credit credit);
+
+        Task<Credit> Delete(int id);
     }
 }

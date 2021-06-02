@@ -8,10 +8,14 @@ namespace TeamWebshopProject.API.CSRD.Repository.Interfaces
 {
     public interface ITagRepository
     {
-        Task<List<Tag>> GetTagsList();
+        Task<List<Tag>> GetAll();
 
-        Task<Tag> GetTag(int id);
+        Task<Tag> Get(int id);
 
-        Task<Tag> GetName();
+        Task<Tag> Create(Tag tag);
+
+        Task<Tag> Update(int id, Tag tag);
+
+        Task<Tag> Delete(int id);
     }
 }

@@ -4,28 +4,40 @@ using System.Linq;
 using System.Threading.Tasks;
 
 using TeamWebshopProject.API.CSRD.Repository.Interfaces;
+using TeamWebshopProject.API.Database.Context;
 using TeamWebshopProject.API.Models;
 
 namespace TeamWebshopProject.API.CSRD.Repository.Classes
 {
     public class LoginRepositroy : ILoginRepository
     {
-        public Task<Login> GetLoginAccessType()
+        private readonly TeamWebshopDbContext _context;
+        public LoginRepositroy(TeamWebshopDbContext context)
+        {
+            _context = context;
+        }
+
+        public Task<Login> Create(Login login)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Login> GetLoginEmail()
+        public Task<Login> Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Login> GetLoginId(int id)
+        public Task<Login> Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Login> GetLoginPassword()
+        public Task<List<Login>> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Login> Update(int id, Login login)
         {
             throw new NotImplementedException();
         }
