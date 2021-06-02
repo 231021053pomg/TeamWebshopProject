@@ -11,8 +11,6 @@ namespace TeamWebshopProject.API.CSRD.Repository.Interfaces
 
         Task<Credit> GetCreditId(int id);
 
-        Task<Credit> GetCreditCostomer();
-
         Task<Credit> GetCreditAmount();
     }
 }
