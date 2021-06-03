@@ -9,10 +9,10 @@ using TeamWebshopProject.API.Models;
 
 namespace TeamWebshopProject.API.CSRD.Repository.Classes
 {
-    public class LoginRepositroy : ILoginRepository
+    public class LoginRepository : ILoginRepository
     {
         private readonly TeamWebshopDbContext _context;
-        public LoginRepositroy(TeamWebshopDbContext context)
+        public LoginRepository(TeamWebshopDbContext context)
         {
             _context = context;
         }
