@@ -47,9 +47,8 @@
 
 ### 03/06/2021 - Torsdag
 <ul>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
+	<li>Had morning meating with the teacher where we explained were we where as of now</li>
+	<li>work stuff </li>
+	<li>Did some last touches upon the navbar / header</li>
 </ul>
 	
