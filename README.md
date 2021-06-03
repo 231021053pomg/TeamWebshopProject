@@ -12,6 +12,10 @@
 - Continued work of Reposiotries
 
 ## Eric
+### 03/06/2021
+- Finished test for all repository test
+- Started implementing repositories
+
 ### 02/06/2021
 - Finished up database migration
 - Added basemodel with created, edited and deleted dates
