@@ -20,7 +20,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
         public CustomerRepositoryTest()
         {
             _options = new DbContextOptionsBuilder<TeamWebshopDbContext>()
-                .UseInMemoryDatabase(databaseName: "CustomerItemDatabase")
+                .UseInMemoryDatabase(databaseName: "CustomerDatabase")
                 .Options;
 
             _context = new(_options);

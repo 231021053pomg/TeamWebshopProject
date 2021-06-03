@@ -18,7 +18,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
         public CreditRepositoryTest()
         {
             _options = new DbContextOptionsBuilder<TeamWebshopDbContext>()
-                .UseInMemoryDatabase(databaseName: "CreditItemDatabase")
+                .UseInMemoryDatabase(databaseName: "CreditDatabase")
                 .Options;
 
             _context = new(_options);

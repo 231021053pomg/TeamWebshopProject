@@ -18,7 +18,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
         public BasketRepositoryTest()
         {
             _options = new DbContextOptionsBuilder<TeamWebshopDbContext>()
-                .UseInMemoryDatabase(databaseName: "BasketItemDatabase")
+                .UseInMemoryDatabase(databaseName: "BasketDatabase")
                 .Options;
 
             _context = new(_options);

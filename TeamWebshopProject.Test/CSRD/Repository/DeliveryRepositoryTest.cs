@@ -20,7 +20,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
         public DeliveryRepositoryTest()
         {
             _options = new DbContextOptionsBuilder<TeamWebshopDbContext>()
-                .UseInMemoryDatabase(databaseName: "DeliveryItemDatabase")
+                .UseInMemoryDatabase(databaseName: "DeliveryDatabase")
                 .Options;
 
             _context = new(_options);
