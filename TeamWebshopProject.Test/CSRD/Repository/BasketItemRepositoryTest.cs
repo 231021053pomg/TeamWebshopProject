@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using TeamWebshopProject.API.CSRD.Repository.Classes;
 using TeamWebshopProject.API.Database.Context;
@@ -72,9 +70,9 @@ namespace TeamWebshopProject.Test.CSRD.Repository
         public async Task Get_ReturnSuccess_Test()
         {
             // Arrange
-            BasketItem expectedResult = new BasketItem 
-            { 
-                Id = 1, 
+            BasketItem expectedResult = new BasketItem
+            {
+                Id = 1,
                 Basket = new Basket { Id = 1 },
                 Item = new Item { Id = 5 },
                 Quantity = 2
@@ -99,7 +97,8 @@ namespace TeamWebshopProject.Test.CSRD.Repository
         public async Task Create_Success_Test()
         {
             // Arrange
-            BasketItem newItem = new BasketItem { 
+            BasketItem newItem = new BasketItem
+            {
                 Id = 10,
                 Basket = new Basket { Id = 1 },
                 Item = new Item { Id = 2 },
