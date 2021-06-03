@@ -33,16 +33,17 @@ namespace TeamWebshopProject.Test.CSRD.Repository
             });
             _context.Add(new Delivery
             {
-                Id = 1,
-                Order = new Order { Id = 1 },
+                Id = 2,
+                Order = new Order { Id = 2 },
                 Status = "Problem with delivery"
             });
             _context.Add(new Delivery
             {
-                Id = 1,
-                Order = new Order { Id = 1 },
+                Id = 3,
+                Order = new Order { Id = 3 },
                 Status = "Problem with delivery"
             });
+            _context.SaveChanges();
         }
         #endregion
 

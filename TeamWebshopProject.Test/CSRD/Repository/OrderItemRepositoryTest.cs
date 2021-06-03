@@ -46,6 +46,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                 Item = new Item { Id = 3 },
                 Quantity = 3
             });
+            _context.SaveChanges();
         }
         #endregion
 

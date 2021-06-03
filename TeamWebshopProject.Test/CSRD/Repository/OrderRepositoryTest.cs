@@ -43,6 +43,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                 Customer = new Customer { Id = 3 },
                 Price = 16.9m
             });
+            _context.SaveChanges();
         }
         #endregion
 

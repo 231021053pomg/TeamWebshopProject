@@ -40,6 +40,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                 Id = 3,
                 Name = "Deepfried"
             });
+            _context.SaveChanges();
         }
         #endregion
 

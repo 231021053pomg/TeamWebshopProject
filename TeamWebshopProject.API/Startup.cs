@@ -35,7 +35,7 @@ namespace TeamWebshopProject.API
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IDeliveryRepository, DeliveryRepository>();
             services.AddScoped<IItemRepository, ItemRepository>();
-            services.AddScoped<ILoginRepository, LoginRepositroy>();
+            services.AddScoped<ILoginRepository, LoginRepository>();
             services.AddScoped<IOrderItemRepository, OrderItemRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<ITagRepository, TagRepository>();

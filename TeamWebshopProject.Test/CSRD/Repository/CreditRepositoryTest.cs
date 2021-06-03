@@ -38,6 +38,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                 Id = 3,
                 CreditAmount = 4.20m
             });
+            _context.SaveChanges();
         }
         #endregion
 

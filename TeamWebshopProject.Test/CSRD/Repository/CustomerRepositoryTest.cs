@@ -64,6 +64,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                 AddressNumber = 3,
                 AddressPostCode = 4000
             });
+            _context.SaveChanges();
         }
         #endregion
 
