@@ -7,10 +7,14 @@ namespace TeamWebshopProject.API.CSRD.Repository.Interfaces
 {
     public interface IBasketItemRepository
     {
-        Task<List<BasketItem>> GetBasketItems();
+        Task<List<BasketItem>> GetAll();
 
-        Task<BasketItem> GetBasketItem(int id);
+        Task<BasketItem> Get(int id);
 
-        Task<BasketItem> GetBasketItemQuantity();
+        Task<BasketItem> Create(BasketItem basketItem);
+
+        Task<BasketItem> Update(int id, BasketItem basketItem);
+
+        Task<BasketItem> Delete(int id);
     }
 }

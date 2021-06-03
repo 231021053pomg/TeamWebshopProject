@@ -4,28 +4,40 @@ using System.Linq;
 using System.Threading.Tasks;
 
 using TeamWebshopProject.API.CSRD.Repository.Interfaces;
+using TeamWebshopProject.API.Database.Context;
 using TeamWebshopProject.API.Models;
 
 namespace TeamWebshopProject.API.CSRD.Repository.Classes
 {
     public class DeliveryRepository : IDeliveryRepository
     {
-        public Task<List<Delivery>> GetDeliveriesList()
+        private readonly TeamWebshopDbContext _context;
+        public DeliveryRepository(TeamWebshopDbContext context)
+        {
+            _context = context;
+        }
+
+        public Task<Delivery> Create(Delivery delivery)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Delivery> GetDelivery(int id)
+        public Task<Delivery> Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Delivery> GetDeliveryStatus()
+        public Task<Delivery> Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Order> GetOrder()
+        public Task<List<Delivery>> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Delivery> Update(int id, Delivery delivery)
         {
             throw new NotImplementedException();
         }

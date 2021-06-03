@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 using TeamWebshopProject.API.CSRD.Repository.Interfaces;
 using TeamWebshopProject.API.Database.Context;
 using TeamWebshopProject.API.Models;
@@ -15,17 +16,28 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
         {
             _context = context;
         }
-        public Task<BasketItem> GetBasketItem(int id)
+
+        public Task<BasketItem> Create(BasketItem basketItem)
         {
             throw new NotImplementedException();
         }
 
-        public Task<BasketItem> GetBasketItemQuantity()
+        public Task<BasketItem> Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<BasketItem>> GetBasketItems()
+        public Task<BasketItem> Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<BasketItem>> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<BasketItem> Update(int id, BasketItem basketItem)
         {
             throw new NotImplementedException();
         }

@@ -2,35 +2,41 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
 using TeamWebshopProject.API.CSRD.Repository.Interfaces;
+using TeamWebshopProject.API.Database.Context;
 using TeamWebshopProject.API.Models;
 
 namespace TeamWebshopProject.API.CSRD.Repository.Classes
 {
     public class BasketRepository : IBasketRepository
     {
-        public Task<List<Basket>> GetBasket()
+        private readonly TeamWebshopDbContext _context;
+        public BasketRepository(TeamWebshopDbContext context)
+        {
+            _context = context;
+        }
+
+        public Task<Basket> Create(Basket basket)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Basket> GetBasketCreatedAt()
+        public Task<Basket> Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Basket> GetBasketCustomer(int id)
+        public Task<Basket> Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Basket> GetBasketPrice()
+        public Task<List<Basket>> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public Task<Basket> GetBasketQuantity()
+        public Task<Basket> Update(int id, Basket basket)
         {
             throw new NotImplementedException();
         }

@@ -7,24 +7,14 @@ namespace TeamWebshopProject.API.CSRD.Repository.Interfaces
 {
     public interface ICustomerRepository
     {
-        Task<List<Customer>> GetCustomerList();
+        Task<List<Customer>> GetAll();
 
-        Task<Customer> GetCustomer(int id);
+        Task<Customer> Get(int id);
 
-        Task<Customer> GetCustomerCredit();
+        Task<Customer> Create(Customer customer);
 
-        Task<Customer> GetCustomerUsername();
+        Task<Customer> Update(int id, Customer customer);
 
-        Task<Customer> GetCustomerFirstname();
-
-        Task<Customer> GetCustomerLastname();
-
-        Task<Customer> GetCustomerBirthDay();
-
-        Task<Customer> GetCustomerAddressSreet();
-
-        Task<Customer> GetCustomerAddressNumber();
-
-        Task<Customer> GetCustomerAddressPostCode();
+        Task<Customer> Delete(int id);
     }
 }

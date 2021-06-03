@@ -7,12 +7,14 @@ namespace TeamWebshopProject.API.CSRD.Repository.Interfaces
 {
     public interface ILoginRepository
     {
-        Task<Login> GetLoginId(int id);
+        Task<List<Login>> GetAll();
 
-        Task<Login> GetLoginAccessType();
+        Task<Login> Get(int id);
 
-        Task<Login> GetLoginEmail();
+        Task<Login> Create(Login login);
 
-        Task<Login> GetLoginPassword();
+        Task<Login> Update(int id, Login login);
+
+        Task<Login> Delete(int id);
     }
 }
