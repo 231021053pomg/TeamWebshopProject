@@ -11,6 +11,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
 {
     public class BasketItemRepositoryTest
     {
+        #region setup
         private DbContextOptions<TeamWebshopDbContext> _options;
         private readonly TeamWebshopDbContext _context;
 
@@ -47,6 +48,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                     Quantity = 1
                 });
         }
+        #endregion
 
         #region GetAll
         [Fact]
