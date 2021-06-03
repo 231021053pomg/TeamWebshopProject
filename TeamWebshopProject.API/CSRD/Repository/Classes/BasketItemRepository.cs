@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
 using TeamWebshopProject.API.CSRD.Repository.Interfaces;
 using TeamWebshopProject.API.Database.Context;
 using TeamWebshopProject.API.Models;
@@ -17,29 +17,65 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
             _context = context;
         }
 
-        public Task<BasketItem> Create(BasketItem basketItem)
+        public async Task<BasketItem> Create(BasketItem basketItem)
         {
-            throw new NotImplementedException();
+            basketItem.CreatedAt = DateTime.Now;
+            _context.BasketItems.Add(basketItem);
+            await _context.SaveChangesAsync();
+
+            return basketItem;
         }
 
-        public Task<BasketItem> Delete(int id)
+        public async Task<BasketItem> Delete(int id)
         {
-            throw new NotImplementedException();
+            var basketItem = await _context.BasketItems
+                .FirstOrDefaultAsync(b => b.Id == id);
+
+            if (basketItem != null || basketItem.DeletedAt == null)
+            {
+                basketItem.DeletedAt = DateTime.Now;
+                await _context.SaveChangesAsync();
+            }
+
+            return basketItem;
         }
 
-        public Task<BasketItem> Get(int id)
+        public async Task<BasketItem> Get(int id)
         {
-            throw new NotImplementedException();
+            return await _context.BasketItems
+                .Where(b => b.DeletedAt == null)
+                .FirstOrDefaultAsync(b => b.Id == id);
         }
 
-        public Task<List<BasketItem>> GetAll()
+        public async Task<List<BasketItem>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.BasketItems
+                .Where(b => b.DeletedAt == null)
+                .ToListAsync();
         }
 
-        public Task<BasketItem> Update(int id, BasketItem basketItem)
+        public async Task<BasketItem> Update(int id, BasketItem updatedBasketItem)
         {
-            throw new NotImplementedException();
+            var basketItem = await _context.BasketItems
+                .FirstOrDefaultAsync(b => b.Id == id);
+
+            if (basketItem != null)
+            {
+                basketItem.EditedAt = DateTime.Now;
+
+                if (updatedBasketItem.Basket != null)
+                    basketItem.Basket = updatedBasketItem.Basket;
+
+                if (updatedBasketItem.Item != null)
+                    basketItem.Item = updatedBasketItem.Item;
+
+                basketItem.Quantity = updatedBasketItem.Quantity;
+
+                _context.Update(basketItem);
+                await _context.SaveChangesAsync();
+            }
+
+            return basketItem;
         }
     }
 }
