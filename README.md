@@ -44,4 +44,12 @@
 	<li>Had a mornining talk with teacher, where we talked about how far we were as of now</li>
 	<li>continued working on the header / navbar --- nearly done</li>
 </ul>
+
+### 03/06/2021 - Torsdag
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
 	
