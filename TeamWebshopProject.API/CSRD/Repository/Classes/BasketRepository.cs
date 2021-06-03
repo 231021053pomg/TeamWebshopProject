@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,29 +17,64 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
             _context = context;
         }
 
-        public Task<Basket> Create(Basket basket)
+        public async Task<Basket> Create(Basket basket)
         {
-            throw new NotImplementedException();
+            basket.CreatedAt = DateTime.Now;
+            _context.Baskets.Add(basket);
+            await _context.SaveChangesAsync();
+
+            return basket;
         }
 
-        public Task<Basket> Delete(int id)
+        public async Task<Basket> Delete(int id)
         {
-            throw new NotImplementedException();
+            var basket = await _context.Baskets
+                .FirstOrDefaultAsync(b => b.Id == id);
+
+            if (basket != null || basket.DeletedAt == null)
+            {
+                basket.DeletedAt = DateTime.Now;
+                await _context.SaveChangesAsync();
+            }
+
+            return basket;
         }
 
-        public Task<Basket> Get(int id)
+        public async Task<Basket> Get(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Baskets
+                .Where(b => b.DeletedAt == null)
+                .FirstOrDefaultAsync(b => b.Id == id);
         }
 
-        public Task<List<Basket>> GetAll()
+        public async Task<List<Basket>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.Baskets
+                .Where(b => b.DeletedAt == null)
+                .ToListAsync();
         }
 
-        public Task<Basket> Update(int id, Basket basket)
+        public async Task<Basket> Update(int id, Basket updatedBasket)
         {
-            throw new NotImplementedException();
+            var basket = await _context.Baskets
+                .FirstOrDefaultAsync(b => b.Id == id);
+
+            if (basket != null)
+            {
+                basket.EditedAt = DateTime.Now;
+
+                if (updatedBasket.Customer != null)
+                    basket.Customer = updatedBasket.Customer;
+
+                basket.Quantity = updatedBasket.Quantity;
+
+                basket.Price = updatedBasket.Price;
+
+                _context.Update(basket);
+                await _context.SaveChangesAsync();
+            }
+
+            return basket;
         }
     }
 }
