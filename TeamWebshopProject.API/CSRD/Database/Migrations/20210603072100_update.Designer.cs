@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TeamWebshopProject.API.Database.Context;
 
 namespace TeamWebshopProject.API.Migrations
 {
     [DbContext(typeof(TeamWebshopDbContext))]
-    partial class TeamWebshopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210603072100_update")]
+    partial class update
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
