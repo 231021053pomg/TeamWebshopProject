@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeamWebshopProject.Test.CSRD.Repository
 {
-    public class Credit
+    public class CustomerRepositoryTest
     {
         #region setup
         #endregion

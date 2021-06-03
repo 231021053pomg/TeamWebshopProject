@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeamWebshopProject.Test.CSRD.Repository
 {
-    public class OrderItem
+    public class ItemRepositoryTest
     {
         #region setup
         #endregion

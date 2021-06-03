@@ -72,14 +72,14 @@ namespace TeamWebshopProject.Test.CSRD.Repository
         public async Task Get_ReturnSuccess_Test()
         {
             // Arrange
+            int id = 1;
             BasketItem expectedResult = new BasketItem
             {
-                Id = 1,
+                Id = id,
                 Basket = new Basket { Id = 1 },
                 Item = new Item { Id = 5 },
                 Quantity = 2
             };
-            int id = 1;
             BasketItemRepository basketItemRepository = new(_context);
 
             // Act
