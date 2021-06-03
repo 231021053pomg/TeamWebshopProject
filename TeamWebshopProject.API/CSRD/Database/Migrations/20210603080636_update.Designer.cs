@@ -10,7 +10,7 @@ using TeamWebshopProject.API.Database.Context;
 namespace TeamWebshopProject.API.Migrations
 {
     [DbContext(typeof(TeamWebshopDbContext))]
-    [Migration("20210603072100_update")]
+    [Migration("20210603080636_update")]
     partial class update
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -121,6 +121,9 @@ namespace TeamWebshopProject.API.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("AddressNumber")
+                        .HasColumnType("int");
+
                     b.Property<int>("AddressPostCode")
                         .HasColumnType("int");
 
@@ -128,9 +131,6 @@ namespace TeamWebshopProject.API.Migrations
                         .IsRequired()
                         .HasMaxLength(64)
                         .HasColumnType("nvarchar(64)");
-
-                    b.Property<int>("AdressNumber")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("BirthDay")
                         .HasColumnType("datetime2");

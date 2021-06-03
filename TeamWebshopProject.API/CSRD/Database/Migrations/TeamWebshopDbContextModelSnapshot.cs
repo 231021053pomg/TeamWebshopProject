@@ -119,6 +119,9 @@ namespace TeamWebshopProject.API.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("AddressNumber")
+                        .HasColumnType("int");
+
                     b.Property<int>("AddressPostCode")
                         .HasColumnType("int");
 
@@ -126,9 +129,6 @@ namespace TeamWebshopProject.API.Migrations
                         .IsRequired()
                         .HasMaxLength(64)
                         .HasColumnType("nvarchar(64)");
-
-                    b.Property<int>("AdressNumber")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("BirthDay")
                         .HasColumnType("datetime2");

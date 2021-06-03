@@ -7,137 +7,142 @@ namespace TeamWebshopProject.API.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.RenameColumn(
+                name: "AdressNumber",
+                table: "Customers",
+                newName: "AddressNumber");
+
             migrationBuilder.AddColumn<DateTime>(
                 name: "CreatedAt",
                 table: "Tags",
-                type: "datetime",
+                type: "datetime2",
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "DeletedAt",
                 table: "Tags",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "EditedAt",
                 table: "Tags",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "CreatedAt",
                 table: "Orders",
-                type: "datetime",
+                type: "datetime2",
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "DeletedAt",
                 table: "Orders",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "EditedAt",
                 table: "Orders",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "CreatedAt",
                 table: "OrderItems",
-                type: "datetime",
+                type: "datetime2",
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "DeletedAt",
                 table: "OrderItems",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "EditedAt",
                 table: "OrderItems",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "CreatedAt",
                 table: "Logins",
-                type: "datetime",
+                type: "datetime2",
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "DeletedAt",
                 table: "Logins",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "EditedAt",
                 table: "Logins",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "CreatedAt",
                 table: "Items",
-                type: "datetime",
+                type: "datetime2",
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "DeletedAt",
                 table: "Items",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "EditedAt",
                 table: "Items",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "CreatedAt",
                 table: "Deliveries",
-                type: "datetime",
+                type: "datetime2",
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "DeletedAt",
                 table: "Deliveries",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "EditedAt",
                 table: "Deliveries",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "CreatedAt",
                 table: "Customers",
-                type: "datetime",
+                type: "datetime2",
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "DeletedAt",
                 table: "Customers",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "EditedAt",
                 table: "Customers",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AlterColumn<decimal>(
@@ -151,58 +156,58 @@ namespace TeamWebshopProject.API.Migrations
             migrationBuilder.AddColumn<DateTime>(
                 name: "CreatedAt",
                 table: "Credits",
-                type: "datetime",
+                type: "datetime2",
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "DeletedAt",
                 table: "Credits",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "EditedAt",
                 table: "Credits",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "CreatedAt",
                 table: "Baskets",
-                type: "datetime",
+                type: "datetime2",
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "DeletedAt",
                 table: "Baskets",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "EditedAt",
                 table: "Baskets",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "CreatedAt",
                 table: "BasketItems",
-                type: "datetime",
+                type: "datetime2",
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "DeletedAt",
                 table: "BasketItems",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "EditedAt",
                 table: "BasketItems",
-                type: "datetime",
+                type: "datetime2",
                 nullable: true);
         }
 
@@ -327,6 +332,11 @@ namespace TeamWebshopProject.API.Migrations
             migrationBuilder.DropColumn(
                 name: "EditedAt",
                 table: "BasketItems");
+
+            migrationBuilder.RenameColumn(
+                name: "AddressNumber",
+                table: "Customers",
+                newName: "AdressNumber");
 
             migrationBuilder.AlterColumn<int>(
                 name: "CreditAmount",

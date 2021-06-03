@@ -31,7 +31,7 @@ namespace TeamWebshopProject.API.Models
         public string AddressStreet { get; set; }
 
         [Required]
-        public int AdressNumber { get; set; }
+        public int AddressNumber { get; set; }
 
         [Required]
         public int AddressPostCode { get; set; }
