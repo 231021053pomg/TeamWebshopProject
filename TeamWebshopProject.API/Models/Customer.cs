@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace TeamWebshopProject.API.Models
 {
-    public class Customer
+    public class Customer : BaseModel
     {
-        [Key]
-        public int Id { get; set; }
-
         [Required]
         public Login Login { get; set; }
 
@@ -37,7 +31,7 @@ namespace TeamWebshopProject.API.Models
         public string AddressStreet { get; set; }
 
         [Required]
-        public int AdressNumber { get; set; }
+        public int AddressNumber { get; set; }
 
         [Required]
         public int AddressPostCode { get; set; }

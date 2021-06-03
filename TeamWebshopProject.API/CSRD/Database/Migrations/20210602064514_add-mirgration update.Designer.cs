@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TeamWebshopProject.API.Database;
+using TeamWebshopProject.API.Database.Context;
 
 namespace TeamWebshopProject.API.Migrations
 {
