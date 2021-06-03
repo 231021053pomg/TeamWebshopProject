@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using TeamWebshopProject.API.CSRD.Repository.Classes;
 using TeamWebshopProject.API.Database.Context;
