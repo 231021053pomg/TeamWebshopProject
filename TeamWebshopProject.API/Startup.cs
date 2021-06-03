@@ -5,7 +5,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using TeamWebshopProject.API.CSRD.Repository.Classes;
+using TeamWebshopProject.API.CSRD.Repository.Interfaces;
 using TeamWebshopProject.API.Database;
+using TeamWebshopProject.API.Database.Context;
 
 namespace TeamWebshopProject.API
 {
@@ -24,6 +27,21 @@ namespace TeamWebshopProject.API
             services.AddDbContext<TeamWebshopDbContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("MyConnectionString"))
                 );
+
+            //DI - repositories
+            services.AddScoped<IBasketItemRepository, BasketItemRepository>();
+            services.AddScoped<IBasketRepository, BasketRepository>();
+            services.AddScoped<ICreditRepository, CreditRepository>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IDeliveryRepository, DeliveryRepository>();
+            services.AddScoped<IItemRepository, ItemRepository>();
+            services.AddScoped<ILoginRepository, LoginRepositroy>();
+            services.AddScoped<IOrderItemRepository, OrderItemRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<ITagRepository, TagRepository>();
+
+
+            //DI - Services
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
