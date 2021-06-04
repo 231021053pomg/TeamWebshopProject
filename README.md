@@ -55,4 +55,11 @@
 	<li>Did some last touches upon the navbar / header</li>
 	<li>Found alot of stupid mistakes from my side and fixed them</li>
 </ul>
+
+### 04/06/2021 - Fredag
+<ul>
+	<li>Morning meating as always -- nothing specific that needs mentioning</li>
+	<li>We Created the last repositoryies and tested them</li>
+	<li> Moved on to work on ServiceTest <li>
+</ul>
 	
