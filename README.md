@@ -54,6 +54,7 @@
 	<li>Had morning meating with the teacher where we explained were we where as of now</li>
 	<li>Did some last touches upon the navbar / header</li>
 	<li>Found alot of stupid mistakes from my side and fixed them</li>
+	<li> will move away from navbar today and then move over to creaet the last repositories </li>
 </ul>
 
 ### 04/06/2021 - Fredag
