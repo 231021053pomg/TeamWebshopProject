@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,35 +12,67 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
 {
     public class TagRepository : ITagRepository
     {
-        private TeamWebshopDbContext _context;
+        private readonly TeamWebshopDbContext _context;
         public TagRepository(TeamWebshopDbContext context)
         {
             _context = context;
         }
 
-        public Task<Tag> Create(Tag tag)
+        public async Task<Tag> Create(Tag tag)
         {
-            throw new NotImplementedException();
+           tag.CreatedAt = DateTime.Now;
+           _context.Tags.Add(tag);
+           await _context.SaveChangesAsync();
+
+            return tag;
         }
 
-        public Task<Tag> Delete(int id)
+        public async Task<Tag> Delete(int id)
         {
-            throw new NotImplementedException();
+            var tag = await _context.Tags
+                .FirstOrDefaultAsync(t => t.Id == id);
+            if (tag != null || tag.DeletedAt == null)
+	        {
+                tag.DeletedAt = DateTime.Now;
+                await _context.SaveChangesAsync();
+
+               
+	        }
+            return tag;
         }
 
-        public Task<Tag> Get(int id)
+        public async Task<Tag> Get(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Tags
+                .Where(t => t.DeletedAt == null)
+                .FirstOrDefaultAsync(t => t.Id == id);
         }
 
-        public Task<List<Tag>> GetAll()
+        public async Task<List<Tag>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.Tags
+                .Where(t => t.DeletedAt == null)
+                .ToListAsync();
         }
 
-        public Task<Tag> Update(int id, Tag tag)
+        public async Task<Tag> Update(int id, Tag updatedTag)
         {
-            throw new NotImplementedException();
+           var tag = await _context.Tags
+                .FirstOrDefaultAsync(t => t.Id == id);
+            if (tag != null)
+	        {
+                tag.EditedAt = DateTime.Now;
+
+                if (updatedTag.Name != null)
+                    tag.Name = updatedTag.Name;
+
+                _context.Update(tag);
+                await _context.SaveChangesAsync();
+	            
+
+	            
+	        }
+            return tag;
         }
     }
 }

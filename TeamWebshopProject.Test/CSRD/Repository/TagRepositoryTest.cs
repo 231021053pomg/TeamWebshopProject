@@ -112,6 +112,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
             TagRepository tagRepository = new(_context);
             Tag updatedTag = new Tag
             {
+                Id = 1,
                 Name = "Stupid"
             };
 
