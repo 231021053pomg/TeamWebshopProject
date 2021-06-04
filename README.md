@@ -60,6 +60,6 @@
 <ul>
 	<li>Morning meating as always -- nothing specific that needs mentioning</li>
 	<li>We Created the last repositoryies and tested them</li>
-	<li> Moved on to work on ServiceTest <li>
+	<li> Moved on to work on ServiceTest </li>
 </ul>
 	
