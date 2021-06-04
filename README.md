@@ -12,6 +12,10 @@
 - Continued work of Reposiotries
 
 ## Eric
+### 04062021
+- Finished implementing repositories
+- Finished implementing services
+
 ### 03/06/2021
 - Finished test for all repository test
 - Started implementing repositories
