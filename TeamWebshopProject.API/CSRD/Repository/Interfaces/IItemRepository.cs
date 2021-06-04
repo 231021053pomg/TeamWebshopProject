@@ -11,7 +11,7 @@ namespace TeamWebshopProject.API.CSRD.Repository.Interfaces
 
         Task<Item> Get(int id);
 
-        Task<Item> Create(Item Item);
+        Task<Item> Create(Item item);
 
         Task<Item> Update(int id, Item item);
 
