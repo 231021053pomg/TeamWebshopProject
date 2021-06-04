@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using TeamWebshopProject.API.CSRD.Repository.Interfaces;
 using TeamWebshopProject.API.CSRD.Services.Interfaces;
 using TeamWebshopProject.API.Models;
 
@@ -9,29 +8,40 @@ namespace TeamWebshopProject.API.CSRD.Services.Classes
 {
     public class BasketService : IBasketService
     {
-        public Task<Basket> Create(Basket basket)
+        private readonly IBasketRepository _basketRepository;
+
+        public BasketService(IBasketRepository basketRepository)
         {
-            throw new NotImplementedException();
+            _basketRepository = basketRepository;
+        }
+        public async Task<Basket> Create(Basket basket)
+        {
+            var result = await _basketRepository.Create(basket);
+            return result;
         }
 
-        public Task<Basket> Delete(int id)
+        public async Task<Basket> Delete(int id)
         {
-            throw new NotImplementedException();
+            var result = await _basketRepository.Delete(id);
+            return result;
         }
 
-        public Task<Basket> Get(int id)
+        public async Task<Basket> Get(int id)
         {
-            throw new NotImplementedException();
+            var result = await _basketRepository.Get(id);
+            return result;
         }
 
-        public Task<List<Basket>> GetAll()
+        public async Task<List<Basket>> GetAll()
         {
-            throw new NotImplementedException();
+            var result = await _basketRepository.GetAll();
+            return result;
         }
 
-        public Task<Basket> Update(int id, Basket basket)
+        public async Task<Basket> Update(int id, Basket basket)
         {
-            throw new NotImplementedException();
+            var result = await _basketRepository.Update(id, basket);
+            return result;
         }
     }
 }
