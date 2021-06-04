@@ -125,8 +125,8 @@ namespace TeamWebshopProject.Test.CSRD.Repository
             // Arrange
             Customer newCustomer = new Customer
             {
-                Login = new Login { Id = 1 },
-                Credit = new Credit { Id = 1 },
+                Login = new Login { Id = 4 },
+                Credit = new Credit { Id = 4 },
                 UserName = "LolGut89",
                 FirstName = "Kurt",
                 LastName = "Ko-Ben",
@@ -155,8 +155,8 @@ namespace TeamWebshopProject.Test.CSRD.Repository
             Customer updatedCustomer = new Customer
             {
                 Id = 1,
-                Login = new Login { Id = 1 },
-                Credit = new Credit { Id = 1 },
+                Login = new Login { Id = 5 },
+                Credit = new Credit { Id = 5 },
                 UserName = "TheShitKingBigBoiStyle",
                 FirstName = "Kurt",
                 LastName = "Ko-Ben",
