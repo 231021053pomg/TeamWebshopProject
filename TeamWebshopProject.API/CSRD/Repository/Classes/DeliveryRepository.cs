@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,29 +18,54 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
             _context = context;
         }
 
-        public Task<Delivery> Create(Delivery delivery)
+        public async Task<Delivery> Create(Delivery delivery)
         {
-            throw new NotImplementedException();
+            delivery.CreatedAt = DateTime.Now;
+            _context.Deliveries.Add(delivery);
+            await _context.SaveChangesAsync();
+
+            return delivery;
         }
 
-        public Task<Delivery> Delete(int id)
+        public async Task<Delivery> Delete(int id)
         {
-            throw new NotImplementedException();
+            var delivery = await _context.Deliveries
+                .FirstOrDefaultAsync(d => d.Id == id);
+
+            if (delivery != null || delivery.DeletedAt == null)
+            {
+                delivery.DeletedAt = DateTime.Now;
+                await _context.SaveChangesAsync();
+            }
+
+            return delivery;
         }
 
-        public Task<Delivery> Get(int id)
+        public async Task<Delivery> Get(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Deliveries
+                .Where(d => d.DeletedAt == null)
+                .FirstOrDefaultAsync(d => d.Id == id);
         }
 
-        public Task<List<Delivery>> GetAll()
+        public async Task<List<Delivery>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.Deliveries
+                .Where(d => d.DeletedAt == null)
+                .ToListAsync();
         }
 
-        public Task<Delivery> Update(int id, Delivery delivery)
+        public async Task<Delivery> Update(int id, Delivery updatedDelivery)
         {
-            throw new NotImplementedException();
+            var delivery = await _context.Deliveries
+                .FirstOrDefaultAsync(d => d.Id == id);
+
+            delivery.Status = updatedDelivery.Status != null ? updatedDelivery.Status : delivery.Status;
+
+            _context.Update(delivery);
+            await _context.SaveChangesAsync();
+
+            return delivery;
         }
     }
 }

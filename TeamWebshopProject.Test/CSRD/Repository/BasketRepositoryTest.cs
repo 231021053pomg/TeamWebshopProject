@@ -44,6 +44,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                 Price = 3000.6m,
                 Created = DateTime.Now
             });
+            _context.SaveChanges();
         }
         #endregion
 

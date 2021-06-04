@@ -41,7 +41,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                 Discount = 13.37m,
                 Discription = "Test Item",
                 Image = "image/2.png",
-                Tags = { new Tag { Id = 1, Name = "Bruh" } }
+                Tags = { new Tag { Id = 2, Name = "Bruh" } }
             });
             _context.Add(new Item
             {
@@ -51,8 +51,9 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                 Discount = 13.37m,
                 Discription = "Test Item",
                 Image = "image/3.png",
-                Tags = { new Tag { Id = 1, Name = "Bruh" } }
+                Tags = { new Tag { Id = 3, Name = "Bruh" } }
             });
+            _context.SaveChanges();
         }
         #endregion
 
@@ -113,7 +114,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                 Discount = 13.37m,
                 Discription = "Test Item",
                 Image = "image/1.png",
-                Tags = { new Tag { Id = 1, Name = "Bruh" } }
+                Tags = { new Tag { Id = 4, Name = "Bruh" } }
             };
             ItemRepository itemRepository = new(_context);
 
@@ -140,7 +141,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                 Discount = 13.37m,
                 Discription = "Test Item, super kvali",
                 Image = "image/1.png",
-                Tags = { new Tag { Id = 1, Name = "Bruh" } }
+                Tags = { new Tag { Id = 5, Name = "Bruh" } }
             };
 
             // Act

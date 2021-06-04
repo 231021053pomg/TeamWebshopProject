@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,29 +18,64 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
             _context = context;
         }
 
-        public Task<OrderItem> Create(OrderItem orderItem)
+        public async Task<OrderItem> Create(OrderItem orderItem)
         {
-            throw new NotImplementedException();
+            orderItem.CreatedAt = DateTime.Now;
+            _context.OrderItems.Add(orderItem);
+            await _context.SaveChangesAsync();
+
+                return orderItem;
         }
 
-        public Task<OrderItem> Delete(int id)
+        public async Task<OrderItem> Delete(int id)
         {
-            throw new NotImplementedException();
+            var orderItem = await _context.OrderItems
+                .FirstOrDefaultAsync(o => o.Id == id);
+            if (orderItem != null || orderItem.DeletedAt == null)
+            {
+                orderItem.DeletedAt = DateTime.Now;
+                await _context.SaveChangesAsync();
+
+            }
+                return orderItem;
         }
 
-        public Task<OrderItem> Get(int id)
+        public async Task<OrderItem> Get(int id)
         {
-            throw new NotImplementedException();
+            return await _context.OrderItems
+                .Where(o => o.DeletedAt == null)
+                .FirstOrDefaultAsync(o => o.Id == id);
         }
 
-        public Task<List<OrderItem>> GetAll()
+        public async Task<List<OrderItem>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.OrderItems
+                .Where(o => o.DeletedAt == null)
+                .ToListAsync();
         }
 
-        public Task<OrderItem> Update(int id, OrderItem orderItem)
+        public async Task<OrderItem> Update(int id, OrderItem UpdatedOrderItem)
         {
-            throw new NotImplementedException();
+            var orderItem = await _context.OrderItems
+                 .FirstOrDefaultAsync(o => o.Id == id);
+
+            if (orderItem != null)
+            {
+                orderItem.EditedAt = DateTime.Now;
+
+                if (UpdatedOrderItem.Order != null)
+                    //orderItem.Order = UpdatedOrderItem.Order;
+
+                if (UpdatedOrderItem.Item != null)
+                    //orderItem.Item = UpdatedOrderItem.Item;
+
+                orderItem.Quantity = UpdatedOrderItem.Quantity;
+
+                _context.Update(orderItem);
+                await _context.SaveChangesAsync();
+            }
+            return orderItem;
+
         }
     }
 }

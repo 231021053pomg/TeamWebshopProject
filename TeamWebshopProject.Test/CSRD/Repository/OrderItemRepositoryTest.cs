@@ -46,6 +46,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                 Item = new Item { Id = 3 },
                 Quantity = 3
             });
+            _context.SaveChanges();
         }
         #endregion
 
@@ -98,9 +99,9 @@ namespace TeamWebshopProject.Test.CSRD.Repository
             // Arrange
             OrderItem newOrderItem = new OrderItem
             {
-                Order = new Order { Id = 1 },
-                Item = new Item { Id = 1 },
-                Quantity = 1
+                Order = new Order { Id = 7 },
+                Item = new Item { Id = 8 },
+                Quantity = 9
             };
             OrderItemRepository orderItemRepository = new(_context);
 
@@ -122,8 +123,8 @@ namespace TeamWebshopProject.Test.CSRD.Repository
             OrderItem updatedOrderItem = new OrderItem
             {
                 Id = 1,
-                Order = new Order { Id = 1 },
-                Item = new Item { Id = 1 },
+                Order = new Order { Id = 10 },
+                Item = new Item { Id = 11 },
                 Quantity = 5
             };
 

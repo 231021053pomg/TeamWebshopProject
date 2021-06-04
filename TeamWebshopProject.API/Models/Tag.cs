@@ -6,5 +6,6 @@ namespace TeamWebshopProject.API.Models
     {
         [Required]
         public string Name { get; set; }
+
     }
 }

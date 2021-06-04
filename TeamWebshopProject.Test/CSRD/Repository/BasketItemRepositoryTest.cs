@@ -28,25 +28,26 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                 {
                     Id = 1,
                     Basket = new Basket { Id = 1 },
-                    Item = new Item { Id = 5 },
+                    Item = new Item { Id = 1 },
+                    Quantity = 1
+                });
+            _context.Add(
+                new BasketItem
+                {
+                    Id = 2,
+                    Basket = new Basket { Id = 2 },
+                    Item = new Item { Id = 2 },
                     Quantity = 2
                 });
             _context.Add(
                 new BasketItem
                 {
                     Id = 3,
-                    Basket = new Basket { Id = 1 },
-                    Item = new Item { Id = 4 },
-                    Quantity = 9
-                });
-            _context.Add(
-                new BasketItem
-                {
-                    Id = 8,
                     Basket = new Basket { Id = 3 },
-                    Item = new Item { Id = 5 },
-                    Quantity = 1
+                    Item = new Item { Id = 3 },
+                    Quantity = 3
                 });
+            _context.SaveChanges();
         }
         #endregion
 
@@ -75,10 +76,10 @@ namespace TeamWebshopProject.Test.CSRD.Repository
             int id = 1;
             BasketItem expectedResult = new BasketItem
             {
-                Id = id,
+                Id = 1,
                 Basket = new Basket { Id = 1 },
-                Item = new Item { Id = 5 },
-                Quantity = 2
+                Item = new Item { Id = 1 },
+                Quantity = 1
             };
             BasketItemRepository basketItemRepository = new(_context);
 
@@ -102,9 +103,9 @@ namespace TeamWebshopProject.Test.CSRD.Repository
             BasketItem newItem = new BasketItem
             {
                 Id = 10,
-                Basket = new Basket { Id = 1 },
-                Item = new Item { Id = 2 },
-                Quantity = 2
+                Basket = new Basket { Id = 10 },
+                Item = new Item { Id = 10 },
+                Quantity = 10
             };
             BasketItemRepository basketItemRepository = new(_context);
 
@@ -126,8 +127,6 @@ namespace TeamWebshopProject.Test.CSRD.Repository
             BasketItem updatedBasketItem = new BasketItem
             {
                 Id = 1,
-                Basket = new Basket { Id = 1 },
-                Item = new Item { Id = 5 },
                 Quantity = 9000
             };
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,29 +18,63 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
             _context = context;
         }
 
-        public Task<Login> Create(Login login)
+        public async Task<Login> Create(Login login)
         {
-            throw new NotImplementedException();
+            login.CreatedAt = DateTime.Now;
+            _context.Logins.Add(login);
+            await _context.SaveChangesAsync();
+
+            return login;
         }
 
-        public Task<Login> Delete(int id)
+        public async Task<Login> Delete(int id)
         {
-            throw new NotImplementedException();
+            var login = await _context.Logins
+                .FirstOrDefaultAsync(l => l.Id == id);
+
+            if (login != null || login.DeletedAt == null)
+            {
+                login.DeletedAt = DateTime.Now;
+                await _context.SaveChangesAsync();
+            }
+            return login;
         }
 
-        public Task<Login> Get(int id)
+        public async Task<Login> Get(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Logins
+                .Where(l => l.DeletedAt == null)
+                .FirstOrDefaultAsync(l => l.Id == id);
         }
 
-        public Task<List<Login>> GetAll()
+        public async Task<List<Login>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.Logins
+                .Where(l => l.DeletedAt == null)
+                .ToListAsync();
         }
 
-        public Task<Login> Update(int id, Login login)
+        public async Task<Login> Update(int id, Login Updatedlogin)
         {
-            throw new NotImplementedException();
+            var login = await _context.Logins
+                .FirstOrDefaultAsync(l => l.Id == id);
+
+            if (login != null)
+            {
+                login.EditedAt = DateTime.Now;
+
+                if (Updatedlogin.AccessType != null)
+                    login.AccessType = Updatedlogin.AccessType;
+
+                if (Updatedlogin.Email != null)
+                    login.Email = Updatedlogin.Email;
+
+                login.Password = Updatedlogin.Password;
+
+                _context.Update(login);
+                await _context.SaveChangesAsync();
+            }
+            return login;
         }
     }
 }

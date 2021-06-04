@@ -44,6 +44,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                 Email = "BoigBoi@hotmail.com",
                 Password = "PassW0rd"
             });
+            _context.SaveChanges();
         }
         #endregion
 

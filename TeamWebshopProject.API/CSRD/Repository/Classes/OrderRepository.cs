@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,35 +12,66 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
 {
     public class OrderRepository : IOrderRepository
     {
-        private TeamWebshopDbContext _context;
+        private readonly TeamWebshopDbContext _context;
         public OrderRepository(TeamWebshopDbContext context)
         {
             _context = context;
         }
 
-        public Task<Order> Create(Order order)
+        public async Task<Order> Create(Order order)
         {
-            throw new NotImplementedException();
+            order.CreatedAt = DateTime.Now;
+            _context.Orders.Add(order);
+            await _context.SaveChangesAsync();
+
+            return order;
         }
 
-        public Task<Order> Delete(int id)
+        public async Task<Order> Delete(int id)
         {
-            throw new NotImplementedException();
+            var order = await _context.Orders
+                .FirstOrDefaultAsync(o => o.Id == id);
+
+            if (order != null || order.DeletedAt == null)
+            {
+                order.DeletedAt = DateTime.Now;
+                await _context.SaveChangesAsync();
+            }
+            return order;
         }
 
-        public Task<Order> Get(int id)
+        public async Task<Order> Get(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Orders
+                .Where(o => o.DeletedAt == null)
+                .FirstOrDefaultAsync(o => o.Id == id);
+               
         }
 
-        public Task<List<Order>> GetAll()
+        public async Task<List<Order>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.Orders
+                .Where(o => o.DeletedAt == null)
+                .ToListAsync();
         }
 
-        public Task<Order> Update(int id, Order order)
+        public async Task<Order> Update(int id, Order updatedOrder)
         {
-            throw new NotImplementedException();
+            var order = await _context.Orders
+                .FirstOrDefaultAsync(o => o.Id == id);
+            if (order != null)
+            {
+                order.EditedAt = DateTime.Now;
+
+                if (updatedOrder.Customer != null)
+                    //order.Customer = updatedOrder.Customer;
+
+                order.Price = updatedOrder.Price;
+
+                _context.Update(order);
+                await _context.SaveChangesAsync();
+            }
+            return order;
         }
     }
 }

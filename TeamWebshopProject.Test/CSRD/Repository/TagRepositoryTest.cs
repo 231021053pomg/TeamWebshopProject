@@ -40,6 +40,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                 Id = 3,
                 Name = "Deepfried"
             });
+            _context.SaveChanges();
         }
         #endregion
 
@@ -111,6 +112,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
             TagRepository tagRepository = new(_context);
             Tag updatedTag = new Tag
             {
+                Id = 1,
                 Name = "Stupid"
             };
 
