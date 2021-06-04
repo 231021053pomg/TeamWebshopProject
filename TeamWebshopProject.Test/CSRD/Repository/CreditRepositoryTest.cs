@@ -68,7 +68,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
             Credit expectedResult = new Credit
             {
                 Id = 1,
-                CreditAmount = 15.1m
+                CreditAmount = 27.7m
             };
             CreditRepository creditRepository = new(_context);
 

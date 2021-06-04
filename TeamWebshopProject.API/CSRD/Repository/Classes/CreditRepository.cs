@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,29 +18,59 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
             _context = context;
         }
 
-        public Task<Credit> Create(Credit credit)
+        public async Task<Credit> Create(Credit credit)
         {
-            throw new NotImplementedException();
+            credit.CreatedAt = DateTime.Now;
+            _context.Credits.Add(credit);
+            await _context.SaveChangesAsync();
+
+            return credit;
         }
 
-        public Task<Credit> Delete(int id)
+        public async Task<Credit> Delete(int id)
         {
-            throw new NotImplementedException();
+            var credit = await _context.Credits
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            if (credit != null || credit.DeletedAt == null)
+            {
+                credit.DeletedAt = DateTime.Now;
+                await _context.SaveChangesAsync();
+            }
+
+            return credit;
         }
 
-        public Task<Credit> Get(int id)
+        public async Task<Credit> Get(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Credits
+                .Where(c => c.DeletedAt == null)
+                .FirstOrDefaultAsync(c => c.Id == id);
         }
 
-        public Task<List<Credit>> GetAll()
+        public async Task<List<Credit>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.Credits
+                .Where(c => c.DeletedAt == null)
+                .ToListAsync();
         }
 
-        public Task<Credit> Update(int id, Credit credit)
+        public async Task<Credit> Update(int id, Credit updatedCredit)
         {
-            throw new NotImplementedException();
+            var credit = await _context.Credits
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            if (credit != null)
+            {
+                credit.EditedAt = DateTime.Now;
+
+                credit.CreditAmount = updatedCredit.CreditAmount;
+
+                _context.Update(credit);
+                await _context.SaveChangesAsync();
+            }
+
+            return credit;
         }
     }
 }
