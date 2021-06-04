@@ -95,7 +95,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
             // Arrange
             Order newOrder = new Order
             {
-                Customer = new Customer { Id = 1 },
+                Customer = new Customer { Id = 4 },
                 Price = 4.20m
             };
             OrderRepository orderRepository = new(_context);
@@ -118,7 +118,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
             Order updatedOrder = new Order
             {
                 Id = 1,
-                Customer = new Customer { Id = 1 },
+                Customer = new Customer { Id = 5 },
                 Price = 6.9m
             };
 
