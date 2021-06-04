@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using TeamWebshopProject.API.CSRD.Repository.Interfaces;
 using TeamWebshopProject.API.CSRD.Services.Interfaces;
 using TeamWebshopProject.API.Models;
 
@@ -9,29 +8,41 @@ namespace TeamWebshopProject.API.CSRD.Services.Classes
 {
     public class BasketItemService : IBasketItemService
     {
-        public Task<BasketItem> Create(BasketItem basketItem)
+        private readonly IBasketItemRepository _basketItemRepository;
+
+        public BasketItemService(IBasketItemRepository basketItemRepository)
         {
-            throw new NotImplementedException();
+            _basketItemRepository = basketItemRepository;
         }
 
-        public Task<BasketItem> Delete(int id)
+        public async Task<BasketItem> Create(BasketItem basketItem)
         {
-            throw new NotImplementedException();
+            var result = await _basketItemRepository.Create(basketItem);
+            return result;
         }
 
-        public Task<BasketItem> Get(int id)
+        public async Task<BasketItem> Delete(int id)
         {
-            throw new NotImplementedException();
+            var result = await _basketItemRepository.Delete(id);
+            return result;
         }
 
-        public Task<List<BasketItem>> GetAll()
+        public async Task<BasketItem> Get(int id)
         {
-            throw new NotImplementedException();
+            var result = await _basketItemRepository.Get(id);
+            return result;
         }
 
-        public Task<BasketItem> Update(int id, BasketItem basketItem)
+        public async Task<List<BasketItem>> GetAll()
         {
-            throw new NotImplementedException();
+            var result = await _basketItemRepository.GetAll();
+            return result;
+        }
+
+        public async Task<BasketItem> Update(int id, BasketItem basketItem)
+        {
+            var result = await _basketItemRepository.Update(id, basketItem);
+            return result;
         }
     }
 }

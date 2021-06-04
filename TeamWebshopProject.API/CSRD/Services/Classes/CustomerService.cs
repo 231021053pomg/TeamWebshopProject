@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TeamWebshopProject.API.CSRD.Repository.Interfaces;
 using TeamWebshopProject.API.CSRD.Services.Interfaces;
 using TeamWebshopProject.API.Models;
 
@@ -9,29 +10,41 @@ namespace TeamWebshopProject.API.CSRD.Services.Classes
 {
     public class CustomerService : ICustomerService
     {
-        public Task<Customer> Create(Customer customer)
+        private readonly ICustomerRepository _customerRepository;
+
+        public CustomerService(ICustomerRepository customerRepository)
         {
-            throw new NotImplementedException();
+            _customerRepository = customerRepository;
         }
 
-        public Task<Customer> Delete(int id)
+        public async Task<Customer> Create(Customer customer)
         {
-            throw new NotImplementedException();
+            var result = await _customerRepository.Create(customer);
+            return result;
         }
 
-        public Task<Customer> Get(int id)
+        public async Task<Customer> Delete(int id)
         {
-            throw new NotImplementedException();
+            var result = await _customerRepository.Delete(id);
+            return result;
         }
 
-        public Task<List<Customer>> GetAll()
+        public async Task<Customer> Get(int id)
         {
-            throw new NotImplementedException();
+            var result = await _customerRepository.Get(id);
+            return result;
         }
 
-        public Task<Customer> Update(int id, Customer customer)
+        public async Task<List<Customer>> GetAll()
         {
-            throw new NotImplementedException();
+            var result = await _customerRepository.GetAll();
+            return result;
+        }
+
+        public async Task<Customer> Update(int id, Customer customer)
+        {
+            var result = await _customerRepository.Update(id, customer);
+            return result;
         }
     }
 }

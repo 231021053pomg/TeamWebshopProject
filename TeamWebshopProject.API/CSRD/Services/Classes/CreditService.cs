@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TeamWebshopProject.API.CSRD.Repository.Interfaces;
 using TeamWebshopProject.API.CSRD.Services.Interfaces;
 using TeamWebshopProject.API.Models;
 
@@ -9,29 +10,41 @@ namespace TeamWebshopProject.API.CSRD.Services.Classes
 {
     public class CreditService : ICreditService
     {
-        public Task<Credit> Create(Credit credit)
+        private readonly ICreditRepository _creditRepository;
+
+        public CreditService(ICreditRepository creditRepository)
         {
-            throw new NotImplementedException();
+            _creditRepository = creditRepository;
         }
 
-        public Task<Credit> Delete(int id)
+        public async Task<Credit> Create(Credit credit)
         {
-            throw new NotImplementedException();
+            var result = await _creditRepository.Create(credit);
+            return result;
         }
 
-        public Task<Credit> Get(int id)
+        public async Task<Credit> Delete(int id)
         {
-            throw new NotImplementedException();
+            var result = await _creditRepository.Delete(id);
+            return result;
         }
 
-        public Task<List<Credit>> GetAll()
+        public async Task<Credit> Get(int id)
         {
-            throw new NotImplementedException();
+            var result = await _creditRepository.Get(id);
+            return result;
         }
 
-        public Task<Credit> Update(int id, Credit credit)
+        public async Task<List<Credit>> GetAll()
         {
-            throw new NotImplementedException();
+            var result = await _creditRepository.GetAll();
+            return result;
+        }
+
+        public async Task<Credit> Update(int id, Credit credit)
+        {
+            var result = await _creditRepository.Update(id, credit);
+            return result;
         }
     }
 }

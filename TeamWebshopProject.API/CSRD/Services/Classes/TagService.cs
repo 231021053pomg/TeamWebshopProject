@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TeamWebshopProject.API.CSRD.Repository.Interfaces;
 using TeamWebshopProject.API.CSRD.Services.Interfaces;
 using TeamWebshopProject.API.Models;
 
@@ -9,29 +10,41 @@ namespace TeamWebshopProject.API.CSRD.Services.Classes
 {
     public class TagService : ITagService
     {
-        public Task<Tag> Create(Tag tag)
+        private readonly ITagRepository _tagRepository;
+
+        public TagService(ITagRepository tagRepository)
         {
-            throw new NotImplementedException();
+            _tagRepository = tagRepository;
         }
 
-        public Task<Tag> Delete(int id)
+        public async Task<Tag> Create(Tag tag)
         {
-            throw new NotImplementedException();
+            var result = await _tagRepository.Create(tag);
+            return result;
         }
 
-        public Task<Tag> Get(int id)
+        public async Task<Tag> Delete(int id)
         {
-            throw new NotImplementedException();
+            var result = await _tagRepository.Delete(id);
+            return result;
         }
 
-        public Task<List<Tag>> GetAll()
+        public async Task<Tag> Get(int id)
         {
-            throw new NotImplementedException();
+            var result = await _tagRepository.Get(id);
+            return result;
         }
 
-        public Task<Tag> Update(int id, Tag tag)
+        public async Task<List<Tag>> GetAll()
         {
-            throw new NotImplementedException();
+            var result = await _tagRepository.GetAll();
+            return result;
+        }
+
+        public async Task<Tag> Update(int id, Tag tag)
+        {
+            var result = await _tagRepository.Update(id, tag);
+            return result;
         }
     }
 }

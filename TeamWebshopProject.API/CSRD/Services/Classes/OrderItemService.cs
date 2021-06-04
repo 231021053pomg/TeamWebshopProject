@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TeamWebshopProject.API.CSRD.Repository.Interfaces;
 using TeamWebshopProject.API.CSRD.Services.Interfaces;
 using TeamWebshopProject.API.Models;
 
@@ -9,29 +10,41 @@ namespace TeamWebshopProject.API.CSRD.Services.Classes
 {
     public class OrderItemService : IOrderItemService
     {
-        public Task<OrderItem> Create(OrderItem orderItem)
+        private readonly IOrderItemRepository _orderItemRepository;
+
+        public OrderItemService(IOrderItemRepository orderItemRepository)
         {
-            throw new NotImplementedException();
+            _orderItemRepository = orderItemRepository;
         }
 
-        public Task<OrderItem> Delete(int id)
+        public async Task<OrderItem> Create(OrderItem orderItem)
         {
-            throw new NotImplementedException();
+            var result = await _orderItemRepository.Create(orderItem);
+            return result;
         }
 
-        public Task<OrderItem> Get(int id)
+        public async Task<OrderItem> Delete(int id)
         {
-            throw new NotImplementedException();
+            var result = await _orderItemRepository.Delete(id);
+            return result;
         }
 
-        public Task<List<OrderItem>> GetAll()
+        public async Task<OrderItem> Get(int id)
         {
-            throw new NotImplementedException();
+            var result = await _orderItemRepository.Get(id);
+            return result;
         }
 
-        public Task<OrderItem> Update(int id, OrderItem orderItem)
+        public async Task<List<OrderItem>> GetAll()
         {
-            throw new NotImplementedException();
+            var result = await _orderItemRepository.GetAll();
+            return result;
+        }
+
+        public async Task<OrderItem> Update(int id, OrderItem orderItem)
+        {
+            var result = await _orderItemRepository.Update(id, orderItem);
+            return result;
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TeamWebshopProject.API.CSRD.Repository.Interfaces;
 using TeamWebshopProject.API.CSRD.Services.Interfaces;
 using TeamWebshopProject.API.Models;
 
@@ -9,29 +10,41 @@ namespace TeamWebshopProject.API.CSRD.Services.Classes
 {
     public class DeliveryService : IDeliveryService
     {
-        public Task<Delivery> Create(Delivery delivery)
+        private readonly IDeliveryRepository _deliveryRepository;
+
+        public DeliveryService(IDeliveryRepository deliveryRepository)
         {
-            throw new NotImplementedException();
+            _deliveryRepository = deliveryRepository;
         }
 
-        public Task<Delivery> Delete(int id)
+        public async Task<Delivery> Create(Delivery delivery)
         {
-            throw new NotImplementedException();
+            var result = await _deliveryRepository.Create(delivery);
+            return result;
         }
 
-        public Task<Delivery> Get(int id)
+        public async Task<Delivery> Delete(int id)
         {
-            throw new NotImplementedException();
+            var result = await _deliveryRepository.Delete(id);
+            return result;
         }
 
-        public Task<List<Delivery>> GetAll()
+        public async Task<Delivery> Get(int id)
         {
-            throw new NotImplementedException();
+            var result = await _deliveryRepository.Get(id);
+            return result;
         }
 
-        public Task<Delivery> Update(int id, Delivery delivery)
+        public async Task<List<Delivery>> GetAll()
         {
-            throw new NotImplementedException();
+            var result = await _deliveryRepository.GetAll();
+            return result;
+        }
+
+        public async Task<Delivery> Update(int id, Delivery delivery)
+        {
+            var result = await _deliveryRepository.Update(id, delivery);
+            return result;
         }
     }
 }
