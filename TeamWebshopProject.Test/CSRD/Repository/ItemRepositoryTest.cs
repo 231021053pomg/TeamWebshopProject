@@ -114,7 +114,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                 Discount = 13.37m,
                 Discription = "Test Item",
                 Image = "image/1.png",
-                Tags = { new Tag { Id = 1, Name = "Bruh" } }
+                Tags = { new Tag { Id = 4, Name = "Bruh" } }
             };
             ItemRepository itemRepository = new(_context);
 
@@ -141,7 +141,7 @@ namespace TeamWebshopProject.Test.CSRD.Repository
                 Discount = 13.37m,
                 Discription = "Test Item, super kvali",
                 Image = "image/1.png",
-                Tags = { new Tag { Id = 1, Name = "Bruh" } }
+                Tags = { new Tag { Id = 5, Name = "Bruh" } }
             };
 
             // Act

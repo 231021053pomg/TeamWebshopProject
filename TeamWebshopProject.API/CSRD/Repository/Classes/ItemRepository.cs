@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,29 +18,64 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
             _context = context;
         }
 
-        public Task<Item> Create(Item Item)
+        public async Task<Item> Create(Item item)
         {
-            throw new NotImplementedException();
+            item.CreatedAt = DateTime.Now;
+            _context.Items.Add(item);
+            await _context.SaveChangesAsync();
+
+            return item;
         }
 
-        public Task<Item> Delete(int id)
+        public async Task<Item> Delete(int id)
         {
-            throw new NotImplementedException();
+            var item = await _context.Items
+                .FirstOrDefaultAsync(i => i.Id == id);
+
+            if (item != null || item.DeletedAt == null)
+            {
+                item.DeletedAt = DateTime.Now;
+                await _context.SaveChangesAsync();
+            }
+
+            return item;
         }
 
-        public Task<Item> Get(int id)
+        public async Task<Item> Get(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Items
+                .Where(i => i.DeletedAt == null)
+                .FirstOrDefaultAsync(i => i.Id == id);
         }
 
-        public Task<List<Item>> GetAll()
+        public async Task<List<Item>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.Items
+                .Where(i => i.DeletedAt == null)
+                .ToListAsync();
         }
 
-        public Task<Item> Update(int id, Item item)
+        public async Task<Item> Update(int id, Item updatedItem)
         {
-            throw new NotImplementedException();
+            var item = await _context.Items
+                .FirstOrDefaultAsync(i => i.Id == id);
+
+            item.ItemType = updatedItem.ItemType != null ? updatedItem.ItemType : item.ItemType;
+
+            item.Price = updatedItem.Price;
+
+            item.Discount = updatedItem.Discount;
+
+            item.Discription = updatedItem.Discription != null ? updatedItem.Discription : item.Discription;
+
+            item.Image = updatedItem.Image != null ? updatedItem.Image : item.Image;
+
+            //item.Tags = updatedItem.Tags != null ? updatedItem.Tags : item.Tags;
+
+            _context.Update(item);
+            await _context.SaveChangesAsync();
+
+            return item;
         }
     }
 }
