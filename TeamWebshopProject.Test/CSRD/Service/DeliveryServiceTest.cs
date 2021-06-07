@@ -1,10 +1,8 @@
 ﻿using Moq;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using TeamWebshopProject.API.CSRD.Repository.Classes;
+using TeamWebshopProject.API.CSRD.Repository.Interfaces;
 using TeamWebshopProject.API.CSRD.Services.Classes;
 using TeamWebshopProject.API.Models;
 using Xunit;
@@ -15,7 +13,7 @@ namespace TeamWebshopProject.Test.CSRD.Service
     {
         #region Setup
         private readonly DeliveryService _deliveryService;
-        private readonly Mock<DeliveryRepository> _mock = new();
+        private readonly Mock<IDeliveryRepository> _mock = new();
 
         public DeliveryServiceTest()
         {
@@ -91,7 +89,7 @@ namespace TeamWebshopProject.Test.CSRD.Service
             Delivery delivery = new Delivery { Id = 1 };
 
             _mock
-                .Setup(x => x.Create(It.IsAny<Delivery>()))
+                .Setup(x => x.Update(It.IsAny<int>(), It.IsAny<Delivery>()))
                 .ReturnsAsync(delivery
                 );
 

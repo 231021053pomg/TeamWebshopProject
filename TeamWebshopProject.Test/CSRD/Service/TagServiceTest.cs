@@ -1,10 +1,8 @@
 ﻿using Moq;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using TeamWebshopProject.API.CSRD.Repository.Classes;
+using TeamWebshopProject.API.CSRD.Repository.Interfaces;
 using TeamWebshopProject.API.CSRD.Services.Classes;
 using TeamWebshopProject.API.Models;
 using Xunit;
@@ -15,7 +13,7 @@ namespace TeamWebshopProject.Test.CSRD.Service
     {
         #region Setup
         private readonly TagService _customerService;
-        private readonly Mock<TagRepository> _mock = new();
+        private readonly Mock<ITagRepository> _mock = new();
 
         public TagServiceTest()
         {
@@ -91,7 +89,7 @@ namespace TeamWebshopProject.Test.CSRD.Service
             Tag tag = new Tag { Id = 1 };
 
             _mock
-                .Setup(x => x.Create(It.IsAny<Tag>()))
+                .Setup(x => x.Update(It.IsAny<int>(), It.IsAny<Tag>()))
                 .ReturnsAsync(tag);
 
             // Act
