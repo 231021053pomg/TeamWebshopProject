@@ -1,10 +1,8 @@
 ﻿using Moq;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using TeamWebshopProject.API.CSRD.Repository.Classes;
+using TeamWebshopProject.API.CSRD.Repository.Interfaces;
 using TeamWebshopProject.API.CSRD.Services.Classes;
 using TeamWebshopProject.API.Models;
 using Xunit;
@@ -15,7 +13,7 @@ namespace TeamWebshopProject.Test.CSRD.Service
     {
         #region Setup
         private readonly LoginService _customerService;
-        private readonly Mock<LoginRepository> _mock = new();
+        private readonly Mock<ILoginRepository> _mock = new();
 
         public LoginServiceTest()
         {
@@ -91,7 +89,7 @@ namespace TeamWebshopProject.Test.CSRD.Service
             Login login = new Login { Id = 1 };
 
             _mock
-                .Setup(x => x.Create(It.IsAny<Login>()))
+                .Setup(x => x.Update(It.IsAny<int>(), It.IsAny<Login>()))
                 .ReturnsAsync(login);
 
             // Act

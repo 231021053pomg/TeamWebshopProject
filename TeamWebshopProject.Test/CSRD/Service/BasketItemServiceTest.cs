@@ -1,21 +1,19 @@
-﻿using System;
+﻿using Moq;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Moq;
-using TeamWebshopProject.API.CSRD.Repository.Classes;
+using TeamWebshopProject.API.CSRD.Repository.Interfaces;
 using TeamWebshopProject.API.CSRD.Services.Classes;
 using TeamWebshopProject.API.Models;
 using Xunit;
 
 namespace TeamWebshopProject.Test.CSRD.Service
 {
-   public class BasketItemServiceTest
+    public class BasketItemServiceTest
     {
         #region Setup
         private readonly BasketItemService _basketItemService;
-        private readonly Mock<BasketItemRepository> _mock = new();
+        private readonly Mock<IBasketItemRepository> _mock = new();
 
         public BasketItemServiceTest()
         {
@@ -49,7 +47,7 @@ namespace TeamWebshopProject.Test.CSRD.Service
         {
             // Arrange
             BasketItem basketItem = new BasketItem { Id = 1, Item = new Item { Id = 1 } };
-            
+
             _mock
                 .Setup(x => x.Get(It.IsAny<int>()))
                 .ReturnsAsync(basketItem);
@@ -91,7 +89,7 @@ namespace TeamWebshopProject.Test.CSRD.Service
             BasketItem basketItem = new BasketItem { Id = 1, Item = new Item { Id = 1 } };
 
             _mock
-                .Setup(x => x.Create(It.IsAny<BasketItem>()))
+                .Setup(x => x.Update(It.IsAny<int>(), It.IsAny<BasketItem>()))
                 .ReturnsAsync(basketItem);
 
             // Act
