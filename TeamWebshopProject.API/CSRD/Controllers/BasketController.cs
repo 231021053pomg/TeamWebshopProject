@@ -6,7 +6,6 @@ using System.Linq;
 using System.Threading.Tasks;
 
 using TeamWebshopProject.API.Models;
-using TeamWebshopProject.API.CSRD.Services.Classes;
 using TeamWebshopProject.API.CSRD.Services.Interfaces;
 
 namespace TeamWebshopProject.API.CSRD.Controllers
