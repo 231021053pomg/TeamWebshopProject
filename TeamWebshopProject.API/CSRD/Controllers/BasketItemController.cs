@@ -56,7 +56,7 @@ namespace TeamWebshopProject.API.CSRD.Controllers
 
         //GET
         [HttpGet("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(BasketItem))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
 
@@ -77,7 +77,7 @@ namespace TeamWebshopProject.API.CSRD.Controllers
             }
             catch (Exception ex)
             {
-                //handle any other exeptons raised by sending code 500
+                //handle any other exception raised by sending code 500
                 return Problem(ex.Message);
             }
         }
@@ -103,16 +103,18 @@ namespace TeamWebshopProject.API.CSRD.Controllers
             }
             catch (Exception ex)
             {
-                //handle any other exeptons raised by sending code 500
+                //handle any other exception raised by sending code 500
                 return Problem(ex.Message);
             }
         }
+
+        //PUT
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
 
-        public async Task<ActionResult> Update([FromRoute] int id, [FromBody] BasketItem basketItem )
+        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] BasketItem basketItem )
         {
             try
             {
@@ -127,10 +129,12 @@ namespace TeamWebshopProject.API.CSRD.Controllers
             }
             catch (Exception ex)
             {
-                //handle any other exeptons raised by sending code 500
+                //handle any other exception raised by sending code 500
                 return Problem(ex.Message);
             }
         }
+
+        //DELETE
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
