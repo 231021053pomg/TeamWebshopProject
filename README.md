@@ -21,7 +21,11 @@
 - Started work on controllers and finished a few, testing on controllers is be done tommorow.
 
 ## Eric
-### 04062021
+### 07/06/2021
+- Started & finished service tests
+- Started Item component
+
+### 04/06/2021
 - Finished implementing repositories
 - Finished implementing services
 
