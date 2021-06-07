@@ -11,6 +11,15 @@
 ### 02/06/2021
 - Continued work of Reposiotries
 
+### 03/06/2021
+- le sickness
+
+### 04/06/2021
+- le sickness
+
+### 07/06/2021
+- Started work on controllers and finished a few, testing on controllers is be done tommorow.
+
 ## Eric
 ### 04062021
 - Finished implementing repositories
