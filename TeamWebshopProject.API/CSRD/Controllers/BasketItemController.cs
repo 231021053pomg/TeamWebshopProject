@@ -22,7 +22,7 @@ namespace TeamWebshopProject.API.CSRD.Controllers
             _basketItemService = basketItemService;
         }
 
-        //GET AlL
+        //GET ALL
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -150,7 +150,7 @@ namespace TeamWebshopProject.API.CSRD.Controllers
             }
             catch (Exception ex)
             {
-
+                //handle any other exception raised by sending code 500
                 return Problem(ex.Message);
             }
         }
