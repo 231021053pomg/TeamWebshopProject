@@ -20,6 +20,9 @@
 ### 07/06/2021
 - Started work on controllers and finished a few, testing on controllers is be done tommorow.
 
+### 08/06/2021
+- Finished work on basic structure of controllers, testing is be done tommorow
+
 ## Eric
 ### 07/06/2021
 - Started & finished service tests
