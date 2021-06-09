@@ -96,5 +96,15 @@
 
 ### 09/06/2021 - Onsdag
 <ul>
+	<li>Started working on Controller Test - pretty much only thing I worked on today</li>
+</ul>
+
+### 10/06/2021 - Torsdag
+<ul>
+	<li></li>
+</ul>
+
+### 11/06/2021 
+<ul>
 	<li></li>
 </ul>
