@@ -62,7 +62,7 @@ namespace TeamWebshopProject.API.CSRD.Controllers
 
                 if ( orderitem == null )
                 {
-                    return NotFound():
+                    return NotFound();
                 }
                 else
                 {
@@ -93,7 +93,7 @@ namespace TeamWebshopProject.API.CSRD.Controllers
             }
             catch (Exception ex)
             {
-                return Problem(ex.Message)
+                return Problem(ex.Message);
             }
         }
 
