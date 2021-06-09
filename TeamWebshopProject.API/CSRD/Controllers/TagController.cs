@@ -75,6 +75,29 @@ namespace TeamWebshopProject.API.CSRD.Controllers
             }
         }
 
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> Create(Tag tag)
+        {
+            try
+            {
+                if ( tag == null)
+                {
+                    return BadRequest("Tag fail");
+                }
+
+                var newTag = await _tagService.Create(tag);
+
+                return Ok(newTag);
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message);
+            }
+        }
+
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
