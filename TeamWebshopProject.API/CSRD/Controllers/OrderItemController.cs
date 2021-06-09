@@ -75,6 +75,28 @@ namespace TeamWebshopProject.API.CSRD.Controllers
             }
         }
 
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> Create(OrderItem orderItem)
+        {
+            try
+            {
+                if ( orderItem == null )
+                {
+                    return BadRequest("Order fail");
+                }
+
+                var newOrderItem = await _orderItemService.Create(orderItem);
+                return Ok(newOrderItem);
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message)
+            }
+        }
+
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
