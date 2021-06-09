@@ -88,10 +88,12 @@
 <ul>
 	<li>Started work on controllers</li>
 </ul>
+
 ### 08/06/2021 - Tirsdag
 <ul>
 	<li>Syg</li>
 </ul>
+
 ### 09/06/2021 - Onsdag
 <ul>
 	<li></li>
