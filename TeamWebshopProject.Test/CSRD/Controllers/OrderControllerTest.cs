@@ -114,7 +114,7 @@ namespace TeamWebshopProject.Test.CSRD.Controllers
         {
             // Arrange
             int id = 1;
-            int price = 0;
+            decimal price = 0;
 
 
             Order order = new Order
