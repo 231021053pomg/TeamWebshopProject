@@ -79,7 +79,7 @@ namespace TeamWebshopProject.API.CSRD.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Create([FromRoute] int id, [FromBody] Delivery delivery)
+        public async Task<IActionResult> Create(Delivery delivery)
         {
             try
             {
