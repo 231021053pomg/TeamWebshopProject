@@ -91,7 +91,7 @@
 
 ### 08/06/2021 - Tirsdag
 <ul>
-	<li>Syg</li>
+	<li>Sickness do be hitting me tho</li>
 </ul>
 
 ### 09/06/2021 - Onsdag
