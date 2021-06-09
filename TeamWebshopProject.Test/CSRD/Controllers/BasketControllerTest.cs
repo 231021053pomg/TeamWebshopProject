@@ -24,6 +24,40 @@ namespace TeamWebshopProject.Test.CSRD.Controllers
             _controller = new BasketController(basketService.Object);
         }
 
-        []
+        [Fact]
+        public async Task GetAll_ShouldReturnWithStatus200_WhenDataExists()
+        {
+
+        }
+
+        [Fact]
+        public async Task GetAll_ShouldReturnWithStatus204_WhenNoDataExists()
+        {
+
+        }
+
+        [Fact]
+        public async Task GetAll_ShouldReturnWithStatus500_WhenBasketIsNull()
+        {
+
+        }
+
+        [Fact]
+        public async Task Create_ShouldReturnWithStatus400_WhenBasketSubmittedIsNull()
+        {
+
+        }
+
+        [Fact]
+        public async Task Create_ShouldReturnWithStatus200_WhenBasketSubmitIsOk()
+        {
+
+        }
+
+        [Fact]
+        public async Task GetById_ShoudReturnWithBasket_WhenBasketExists()
+        {
+            
+        }
     }
 }
