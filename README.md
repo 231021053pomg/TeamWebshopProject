@@ -26,6 +26,9 @@
 ### 09/06/2021
 - Finished work on controller tests.
 
+### 10/06/2021
+- Started work on Angular and worked on the navbar.
+
 ## Eric
 ### 07/06/2021
 - Started & finished service tests
