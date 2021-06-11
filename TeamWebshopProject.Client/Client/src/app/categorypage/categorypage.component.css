@@ -1,0 +1,16 @@
+.PageTitle, h1 {
+  color: white;
+  padding: 1%;
+}
+
+.CategoriesMenu {
+  display: block;
+  list-style-type: none;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+
+  color: white;
+}
