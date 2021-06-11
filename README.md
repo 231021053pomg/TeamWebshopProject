@@ -110,10 +110,10 @@
 
 ### 10/06/2021 - Torsdag
 <ul>
-	<li></li>
+	<li>Something something</li>
 </ul>
 
 ### 11/06/2021 
 <ul>
-	<li></li>
+	<li>Fixed up navbar with Patrick, and then started to work on Product page and got pretty far with it</li>
 </ul>
