@@ -29,6 +29,9 @@
 ### 10/06/2021
 - Started work on Angular and worked on the navbar.
 
+### 11/06/2021
+- Started on category page, set up app routing.
+
 ## Eric
 ### 07/06/2021
 - Started & finished service tests
