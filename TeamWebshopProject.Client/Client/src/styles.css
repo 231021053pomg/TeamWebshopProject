@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #000000;
+    background: linear-gradient(to bottom, #000000 10%, #370617 50%);
+    background-repeat: no-repeat;
+}
+
+html {
+    height: 100%;
+}
