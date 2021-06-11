@@ -6,10 +6,10 @@ import { CategorypageComponent } from './categorypage/categorypage.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
 
 const routes: Routes = [
-  { path: 'front-componennt', component: FrontpageComponent },
-  { path: 'product-component', component: ProductpageComponent },
-  { path: 'category-component', component: CategorypageComponent },
-  { path: 'admin-component', component: AdminpageComponent }
+  { path: 'front', component: FrontpageComponent },
+  { path: 'product', component: ProductpageComponent },
+  { path: 'category', component: CategorypageComponent },
+  { path: 'admin', component: AdminpageComponent }
 ];
 
 @NgModule({
