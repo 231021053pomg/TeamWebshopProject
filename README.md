@@ -32,6 +32,9 @@
 ### 11/06/2021
 - Started on category page, set up app routing.
 
+### 14/06/2021
+- Continued work on the category page added Angular Material module to make good category selection list
+
 ## Eric
 ### 07/06/2021
 - Started & finished service tests
