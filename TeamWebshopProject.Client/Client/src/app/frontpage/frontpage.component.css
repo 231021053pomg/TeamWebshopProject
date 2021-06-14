@@ -1,0 +1,8 @@
+.wrapper {
+    color: white;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    background-image: linear-gradient(to top, rgba(0,0,0,.3), rgba(255,0,0,.3));
+    border-radius: 20px;
+}
