@@ -120,7 +120,7 @@
 
 ### 14/06/2021 - Mandag
 <ul>
-	<li>getting templates of our pages put up, so we can get ready to code typescript and make it functional</li>
+	<li>coding "templates" of our pages , so we can get ready to code typescript and make the website functional</li>
 
 </ul>
 
