@@ -36,6 +36,10 @@
 - Continued work on the category page added Angular Material module to make good category selection list
 
 ## Eric
+### 14/06/2021
+- Back from being sick
+- Started working on frontend, frontpage with selection of items
+
 ### 07/06/2021
 - Started & finished service tests
 - Started Item component
