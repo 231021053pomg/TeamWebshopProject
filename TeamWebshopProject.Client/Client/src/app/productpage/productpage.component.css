@@ -50,6 +50,7 @@
 
 .PriceTag{
     font-size: 50px;
+    margin-right:30px;
     
 }
 .buy-btn  {
@@ -60,6 +61,9 @@
   float: right;
   margin: 0px 20px 20px 0px;
   
+}
+#ProductQuantity{
+    width: 10%;
 }
   
 
