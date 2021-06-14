@@ -3,6 +3,26 @@
     width: 70%;
     text-align: center;
     margin: auto;
-    background-image: linear-gradient(to top, rgba(0,0,0,.3), rgba(255,0,0,.3));
-    border-radius: 20px;
 }
+
+.welcome {
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom left, rgba(255, 255, 255, .1), rgba(0, 0, 0, .4));
+}
+
+.frontPageProducts div {
+    display: block;
+    float: left;
+    margin: 0 20px ;
+}
+
+.frontPageProducts div img {
+    border-radius: 10px 5px 5px 10px;
+    border: 1px solid white;
+}
+
+.frontPageProducts div img:hover {
+    transform: scale(2);
+    transition: transform .4s ease-in-out;
+}
+

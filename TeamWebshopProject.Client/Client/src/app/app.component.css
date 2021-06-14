@@ -1,3 +1,10 @@
+:root {
+  --pepe-blue: #4978ff;
+  --pepe-green: #71bd48;
+  --pepe-brown: #bf7049;
+  /* implement example: "color: var(--pepe-blue)"*/
+}
+
 * {
   margin: 0;
   padding: 0;
