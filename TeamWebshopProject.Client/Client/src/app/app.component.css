@@ -136,4 +136,8 @@ li {
   color: #006C87;
 }
 
+.btn-area {
+  background-color: var(--pepe-green);
+}
+
 /* Header End*/
