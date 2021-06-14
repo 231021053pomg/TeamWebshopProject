@@ -113,7 +113,7 @@
 	<li>Something something</li>
 </ul>
 
-### 11/06/2021 
+### 11/06/2021 - Fredag
 <ul>
 	<li>Fixed up navbar with Patrick, and then started to work on Product page and got pretty far with it</li>
 </ul>
