@@ -117,3 +117,17 @@
 <ul>
 	<li>Fixed up navbar with Patrick, and then started to work on Product page and got pretty far with it</li>
 </ul>
+
+### 14/06/2021 - Mandag
+<ul>
+	<li>getting templates of our pages put up, so we can get ready to code typescript and make it functional</li>
+
+</ul>
+
+### 15/06/2021 - Tirsdag
+
+### 16/06/2021 - Onsdag
+
+### 17/06/2021 - Torsdag
+
+### 18/06/2021 - Fredag
