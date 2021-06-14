@@ -7,6 +7,9 @@ import { FrontpageComponent } from './frontpage/frontpage.component';
 import { ProductpageComponent } from './productpage/productpage.component';
 import { CategorypageComponent } from './categorypage/categorypage.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { AdminpageComponent } from './adminpage/adminpage.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

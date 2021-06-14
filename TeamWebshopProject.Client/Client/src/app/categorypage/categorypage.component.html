@@ -1,17 +1,9 @@
-<div class="CategoryPageContent">
-  <div class="PageTitle">
-    <h1>Categories</h1>
-  </div>
+<mat-selection-list #categories>
+  <mat-list-option *ngFor="let category of typeOfCategories">
+    {{category}}
+  </mat-list-option>
+</mat-selection-list>
 
-  <ul class="categories">
-    <li *ngFor="">
-      
-    </li>
-  </ul>
-
-  <div *ngIf="">
-      <ul class="category">
-        
-      </ul>
-  </div>
-</div>
+<p>
+  Options
+</p>
