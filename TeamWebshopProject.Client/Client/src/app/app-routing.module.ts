@@ -6,6 +6,7 @@ import { CategorypageComponent } from './categorypage/categorypage.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/front', pathMatch: 'full' },
   { path: 'front', component: FrontpageComponent },
   { path: 'product', component: ProductpageComponent },
   { path: 'category', component: CategorypageComponent },
