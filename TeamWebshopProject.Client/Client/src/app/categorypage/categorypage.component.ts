@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategorypageComponent implements OnInit {
 
+  typeOfCategories: string[] = ['Normal Pepe', 'Rare Pepe', 'Exotic Pepe', 'Peepo'];
+
+
+
   constructor() { }
 
   ngOnInit(): void {
