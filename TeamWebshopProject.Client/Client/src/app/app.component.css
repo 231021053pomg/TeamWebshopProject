@@ -52,7 +52,7 @@ header {
     }
       /*Colour changes when hovering over links on navbar*/
       .nav-area li a:hover {
-        color: orange;
+        color: var(--pepe-brown);
       }
 
 
@@ -65,7 +65,7 @@ header {
   text-transform: uppercase;
   padding: 10px 30px;
   border-radius: 5px;
-  background: #006C87;
+  /* background: #006C87; */
   font-size: 20px;
 }
 /*puts a border between each link or button*/
@@ -80,7 +80,7 @@ li {
 
 /* Style The Dropdown Button */
 .dropbtn {
-  background-color: black;
+  background-color: transparent;
   color: white;
   font-size: 16px;
   border: none;
@@ -93,11 +93,17 @@ li {
   display: inline-block;
 }
 
+.dropdown :hover {
+  /* border-radius: 10px 10px 0 0 ; */
+  background-color: var(--pepe-green);
+}
+
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
+  border-radius: 0 40px 40px 40px;
   position: absolute;
-  background-color: grey;
+  background-color: var(--pepe-green);
   min-width: 700px;
   min-height: 500px;
 }
@@ -128,6 +134,10 @@ li {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   color: #006C87;
+}
+
+.btn-area {
+  background-color: var(--pepe-green);
 }
 
 /* Header End*/

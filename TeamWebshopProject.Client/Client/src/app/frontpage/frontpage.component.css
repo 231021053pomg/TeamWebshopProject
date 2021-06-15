@@ -1,0 +1,34 @@
+.wrapper {
+    color: white;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+
+.section {
+    width: 100%;
+}
+
+.welcome {
+    color: var(--pepe-brown);
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom right, white, var(--pepe-green) 80%, white );
+    padding: 10px;
+}
+
+.frontPageProducts div {
+    display: block;
+    float: left;
+    margin: 0 30px;
+}
+
+.frontPageProducts div img {
+    border-radius: 10px 5px 10px 5px;
+    border: 1px solid white;
+}
+
+.frontPageProducts div img:hover {
+    transform: scale(1.2);
+    transition: transform .1s ease-in-out;
+}
+
