@@ -1,22 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace TeamWebshopProject.API.Models
 {
-    public class Basket
+    public class Basket : BaseModel
     {
-        [Key]
-        public int Id { get; set; }
-
+        [Required]
         public Customer Customer { get; set; }
 
         public int Quantity { get; set; }
 
+        [Column(TypeName = "decimal(18,4)")]
         public decimal Price { get; set; }
 
+        [JsonIgnore]
         public DateTime Created { get; set; }
     }
 }
