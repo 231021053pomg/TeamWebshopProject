@@ -35,6 +35,9 @@
 ### 14/06/2021
 - Continued work on the category page added Angular Material module to make good category selection list
 
+### 15/06/2021
+- Nearly done with the category page few things still needs to be implemented.
+
 ## Eric
 ### 14/06/2021
 - Back from being sick
