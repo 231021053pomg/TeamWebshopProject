@@ -133,7 +133,7 @@
 
 ### 15/06/2021 - Tirsdag
 <ul>
-	<li>Typescript that typescript (product page)</li>
+	<li>Typescript that typescript this (product page)</li>
 </ul>
 
 ### 16/06/2021 - Onsdag
