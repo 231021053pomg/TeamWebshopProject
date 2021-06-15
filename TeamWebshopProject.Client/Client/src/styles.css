@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --pepe-blue: #4978ff;
+    --pepe-green: #71bd48;
+    --pepe-brown: #bf7049;
+    /* implement example: "color: var(--pepe-blue)"*/
+  }
+
+body {
+    background-color: #000000;
+    background: linear-gradient(to bottom right, var(--pepe-blue) 50%, #fff);
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+html {
+    height: 100%;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
