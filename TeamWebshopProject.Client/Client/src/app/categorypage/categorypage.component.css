@@ -3,6 +3,11 @@
   padding: 1%;
 }
 
+img {
+    width: 5%;
+    height: auto;
+}
+
 .CategoriesMenu {
   display: block;
   list-style-type: none;
