@@ -7,6 +7,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using TeamWebshopProject.API.CSRD.Repository.Classes;
 using TeamWebshopProject.API.CSRD.Repository.Interfaces;
+using TeamWebshopProject.API.CSRD.Services.Classes;
+using TeamWebshopProject.API.CSRD.Services.Interfaces;
 using TeamWebshopProject.API.Database;
 using TeamWebshopProject.API.Database.Context;
 
@@ -42,6 +44,16 @@ namespace TeamWebshopProject.API
 
 
             //DI - Services
+            services.AddScoped<IBasketItemService, BasketItemService>();
+            services.AddScoped<IBasketService, BasketService>();
+            services.AddScoped<ICreditService, CreditService>();
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IDeliveryService, DeliveryService>();
+            services.AddScoped<IItemService, ItemService>();
+            services.AddScoped<ILoginService, LoginService>();
+            services.AddScoped<IOrderItemService, OrderItemService>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<ITagService, TagService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
