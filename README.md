@@ -39,6 +39,13 @@
 - Nearly done with the category page few things still needs to be implemented.
 
 ## Eric
+### 16/06/2021
+- Har tilføjet cors funktionalitet
+
+### 15/06/2021
+- Oprettede dependency injection for services
+- Lavede Development branch og mergede Backend + Frontend ind
+
 ### 14/06/2021
 - Back from being sick
 - Started working on frontend, frontpage with selection of items
