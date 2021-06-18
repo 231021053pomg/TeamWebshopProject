@@ -14,7 +14,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ProductPageService {
-  apiUrl: string = 'https://https://localhost:44365/apiItem';
+  apiUrl: string = 'https://localhost:44365/apiItem';
   
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json'})

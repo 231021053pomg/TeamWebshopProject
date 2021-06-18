@@ -2,15 +2,15 @@
 <div class="wrapper">
 
   <div id="ImgBox">
-    <img class="ProductImg" src="" alt="">
+    <img class="ProductImg" src="{{item.image}}" alt="">
   </div>
   <div class="ProductItemBox">
     <div class="ProdcutItemDesc">
       <h2 id="ProductItemTitel">{{item.itemType}}</h2>
-      <p></p>
+      <p>{{item.discription}}</p>
       <div class="ProductBuyContainer">       
         <div>
-            <label class="PriceTag"></label>         
+            <label class="PriceTag">{{item.price}}kr</label>         
             <label> Number of items </label>
             <input type="number" id="ProductQuantity" name="quantity" /> 
           <button class="buy-btn" name="ProductBuyButton">Put Into Cart</button>
