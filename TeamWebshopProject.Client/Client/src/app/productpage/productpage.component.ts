@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ProductPageService } from '../product-page.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-productpage',
@@ -18,7 +19,11 @@ export class ProductpageComponent implements OnInit {
     headers: new HttpHeaders({ 'Content-Type': 'application/json'})
   };
 
-  constructor( private http: HttpClient) { }
+  constructor( 
+    private productpageservice: ProductPageService,
+    private http: HttpClient,   private route: ActivatedRoute,) {
+
+   }
 
     id: number = 0;
     item: Item = {itemType: "", price: 0, discount: 0, discription: "", image: "" };
@@ -28,11 +33,14 @@ export class ProductpageComponent implements OnInit {
      
 
   ngOnInit(): void {
+    this.id = (this.route.snapshot.paramMap.get("id") || 0) as number;
+    this.getItem(this.id);
+    
   }
 
-  getItem(id: number): Observable<Item> {
-    return this.http.get<Item>(`${this.apiUrl}/${id}`, this.httpOptions)
-    .pipe(catchError(this.handleError<any>("getItem")));
+  getItem(id: number): void {
+    this.productpageservice.getItem(id)
+    .subscribe(item => this.item = item);
 
 
     
