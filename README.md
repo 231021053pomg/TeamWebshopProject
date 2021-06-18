@@ -147,7 +147,16 @@
 </ul>
 
 ### 16/06/2021 - Onsdag
+<ul>
+	<li></li>
+</ul>
 
 ### 17/06/2021 - Torsdag
+<ul>
+	<li></li>
+</ul>
 
 ### 18/06/2021 - Fredag
+<ul>
+	<li>Typescript progress going foward, need to work as we are a bit behind</li>
+</ul>
