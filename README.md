@@ -158,5 +158,5 @@
 
 ### 18/06/2021 - Fredag
 <ul>
-	<li>Typescript progress going foward, need to work as we are a bit behind</li>
+	<li>Typescript progress finnaly going speeding up.</li>
 </ul>
