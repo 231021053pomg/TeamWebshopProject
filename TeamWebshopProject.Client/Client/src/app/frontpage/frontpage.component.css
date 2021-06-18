@@ -1,12 +1,16 @@
 .wrapper {
     color: white;
-    width: 70%;
+    width: 70vw;
     text-align: center;
     margin: auto;
+    align-items: center;
 }
 
 .section {
-    width: 100%;
+    display: block;
+    background-color: transparent;
+    text-align: center;
+    margin: auto;
 }
 
 .welcome {
@@ -16,18 +20,21 @@
     padding: 10px;
 }
 
-.frontPageProducts div {
+.product {
     display: block;
     float: left;
     margin: 0 30px;
+    list-style: none;
 }
 
-.frontPageProducts div img {
+.product img {
+    width: 200px;
+    height: 200px;
     border-radius: 10px 5px 10px 5px;
     border: 1px solid white;
 }
 
-.frontPageProducts div img:hover {
+.product img:hover {
     transform: scale(1.2);
     transition: transform .1s ease-in-out;
 }

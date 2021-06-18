@@ -1,4 +1,3 @@
-
 <div class="wrapper">
     <div class="welcome section">
         <h1>Welcome to <em>le pepe</em> meme shop</h1>
@@ -8,57 +7,24 @@
     </div>
     <div class="newProducts section">
         <h2>Newly added products</h2>
-        <!-- placeholder products -->
-        <div class="frontPageProducts">
-            <div>
-                <img src="https://picsum.photos/id/420/200" alt="">
-                <p>Product 1</p>
-            </div>
-            <div>
-                <img src="https://picsum.photos/id/2/200" alt="">
-                <p>Product 2</p>
-            </div>
-            <div>
-                <img src="https://picsum.photos/id/3/200" alt="">
-                <p>Product 3</p>
-            </div>
-            <div>
-                <img src="https://picsum.photos/id/4/200" alt="">
-                <p>Product 4</p>
-            </div>
-            <div>
-                <img src="https://picsum.photos/id/5/200" alt="">
-                <p>Product 5</p>
-            </div>
-        </div>
+        <ul *ngFor="let item of newProducts">
+            <li class="product">
+                <img src="{{item.image}}" alt="">
+                <p>{{item.itemType}}</p>
+            </li>
+        </ul>
     </div>
     <div class="popularProducts section">
         <h2>Popular products</h2>
-        <!-- placeholder products -->
-        <div class="frontPageProducts">
-            <div>
-                <img src="https://picsum.photos/id/6/200" alt="">
-                <p>Product 1</p>
-            </div>
-            <div>
-                <img src="https://picsum.photos/id/7/200" alt="">
-                <p>Product 2</p>
-            </div>
-            <div>
-                <img src="https://picsum.photos/id/8/200" alt="">
-                <p>Product 3</p>
-            </div>
-            <div>
-                <img src="https://picsum.photos/id/9/200" alt="">
-                <p>Product 4</p>
-            </div>
-            <div>
-                <img src="https://picsum.photos/id/10/200" alt="">
-                <p>Product 5</p>
-            </div>
-        </div>
+        <ul *ngFor="let item of newProducts">
+            <li class="product">
+                <img src="{{item.image}}" alt="">
+                <p>{{item.itemType}}</p>
+            </li>
+        </ul>
     </div>
 </div>
+
   
 <router-outlet></router-outlet>
   
