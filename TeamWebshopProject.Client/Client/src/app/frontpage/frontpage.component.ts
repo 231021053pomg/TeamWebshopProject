@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from '../models';
+import { FrontpageService } from '../frontpage.service';
 
 @Component({
   selector: 'app-frontpage',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FrontpageComponent implements OnInit {
 
-  constructor() { }
+  newProducts: Item[] = [];
+  popProducts: Item[] = [];
+  constructor(
+    private frontpageService: FrontpageService
+  ) { }
 
   ngOnInit(): void {
+    this.getNewProducts();
   }
 
+  getNewProducts(): void {
+    this.frontpageService.getNewItems()
+    .subscribe(items => this.newProducts = items);
+  }
 }
