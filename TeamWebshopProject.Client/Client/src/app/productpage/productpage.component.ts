@@ -40,7 +40,7 @@ export class ProductpageComponent implements OnInit {
 
   getItem(id: number): void {
     this.productpageservice.getItem(id)
-    .subscribe(item => this.item = item);
+    .subscribe(i => this.item = i);
 
 
     
