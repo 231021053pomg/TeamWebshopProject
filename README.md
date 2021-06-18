@@ -159,4 +159,5 @@
 ### 18/06/2021 - Fredag
 <ul>
 	<li>Typescript progress finnaly going speeding up.</li>
+	<li>very close to completing product page</li>
 </ul>
