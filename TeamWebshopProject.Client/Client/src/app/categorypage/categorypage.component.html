@@ -13,7 +13,7 @@
       <input id="category_Name" #category_Name/>
     </div>
 
-    <button (click)="add(category_Name.value); category_Name.value = '';">Save</button>
+    <button (click)="addCategory(category_Name.value); category_Name.value = '';">Save</button>
 
 
     <mat-list-option *ngFor="let category of typeOfCategories" [value]="category">
