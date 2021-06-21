@@ -1,0 +1,85 @@
+<div class="CategoryPageContent">
+  <mat-selection-list #categories [multiple]="false">
+    <img matListAvatar src="https://s.starladder.com/uploads/team_logo/b/7/e/6/thumb_270_5deb1aab54ed73c70398c6ba19a99e9c.jpg" />
+
+    <h2> Pepe categories </h2>
+
+    <p>
+      Category selected: {{categories.selectedOptions.selected[0]?.value}}
+    </p>
+
+    <div class="AddCategoryDiv">
+      <label>Add Category:</label>
+      <input id="category_Name" #category_Name/>
+    </div>
+
+    <button (click)="addCategory(category_Name.value); category_Name.value = '';">Save</button>
+
+
+    <mat-list-option *ngFor="let category of typeOfCategories" [value]="category">
+      {{category}}
+    </mat-list-option>
+  </mat-selection-list>
+
+  <mat-grid-list cols="4" rowHeight="4:2">
+    <mat-grid-tile>
+      1
+      <img matListAvatar src="" alt="" />
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      2
+      <img matListAvatar src="" alt="" />
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      3
+      <img matListAvatar src="" alt="" />
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      4
+      <img matListAvatar src="" alt="" />
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      5
+      <img matListAvatar src="" alt="" />
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      6
+      <img matListAvatar src="" alt="" />
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      7
+      <img matListAvatar src="" alt="" />
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      8
+      <img matListAvatar src="" alt="" />
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      9
+      <img matListAvatar src="" alt="" />
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      10
+      <img matListAvatar src="" alt="" />
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      11
+      <img matListAvatar src="" alt="" />
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      12
+      <img matListAvatar src="" alt="" />
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

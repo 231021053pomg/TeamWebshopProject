@@ -1,21 +1,22 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using TeamWebshopProject.API.CSRD.Repository.Classes;
+using TeamWebshopProject.API.CSRD.Repository.Interfaces;
+using TeamWebshopProject.API.CSRD.Services.Classes;
+using TeamWebshopProject.API.CSRD.Services.Interfaces;
+using TeamWebshopProject.API.Database;
+using TeamWebshopProject.API.Database.Context;
 
 namespace TeamWebshopProject.API
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -26,6 +27,46 @@ namespace TeamWebshopProject.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // CORS configuration needed in order to allow angular app to communicate with server
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:4200")
+                                .AllowAnyHeader()
+                                .AllowAnyMethod();
+                    });
+            });
+
+            services.AddDbContext<TeamWebshopDbContext>(
+                options => options.UseSqlServer(Configuration.GetConnectionString("MyConnectionString"))
+                );
+
+            //DI - repositories
+            services.AddScoped<IBasketItemRepository, BasketItemRepository>();
+            services.AddScoped<IBasketRepository, BasketRepository>();
+            services.AddScoped<ICreditRepository, CreditRepository>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IDeliveryRepository, DeliveryRepository>();
+            services.AddScoped<IItemRepository, ItemRepository>();
+            services.AddScoped<ILoginRepository, LoginRepository>();
+            services.AddScoped<IOrderItemRepository, OrderItemRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<ITagRepository, TagRepository>();
+
+
+            //DI - Services
+            services.AddScoped<IBasketItemService, BasketItemService>();
+            services.AddScoped<IBasketService, BasketService>();
+            services.AddScoped<ICreditService, CreditService>();
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IDeliveryService, DeliveryService>();
+            services.AddScoped<IItemService, ItemService>();
+            services.AddScoped<ILoginService, LoginService>();
+            services.AddScoped<IOrderItemService, OrderItemService>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<ITagService, TagService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -47,6 +88,8 @@ namespace TeamWebshopProject.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseAuthorization();
 

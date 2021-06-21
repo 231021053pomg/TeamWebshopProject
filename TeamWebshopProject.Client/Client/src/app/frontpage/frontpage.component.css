@@ -1,0 +1,41 @@
+.wrapper {
+    color: white;
+    width: 70vw;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+}
+
+.section {
+    display: block;
+    background-color: transparent;
+    text-align: center;
+    margin: auto;
+}
+
+.welcome {
+    color: var(--pepe-brown);
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom right, white, var(--pepe-green) 80%, white );
+    padding: 10px;
+}
+
+.product {
+    display: block;
+    float: left;
+    margin: 0 30px;
+    list-style: none;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px 5px 10px 5px;
+    border: 1px solid white;
+}
+
+.product img:hover {
+    transform: scale(1.2);
+    transition: transform .1s ease-in-out;
+}
+
