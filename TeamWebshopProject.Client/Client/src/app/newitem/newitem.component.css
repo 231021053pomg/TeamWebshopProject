@@ -19,6 +19,7 @@ label { display: table-cell; }
 }
 #descInput{
     height: 200px;
+    width: 450px;
 }
 
 .saveButton{
