@@ -25,7 +25,7 @@ export class CategorypageComponent implements OnInit {
     this.categoryService.getCategories().subscribe(category => this.typeOfCategories = category);
   }
 
-  addCategory(categoryCat_Name: string): void {
+  addCategory(category_Name: string): void {
     this.categoryService.addCategory({ category_Name } as Category).subscribe(category => { this.typeOfCategories.push(category) });
   }
 
