@@ -9,7 +9,7 @@
         <h2>Newly added products</h2>
         <ul *ngFor="let item of newProducts">
             <li class="product">
-                <img src="{{item.image}}" alt="">
+                <img src="{{item.image}}" routerLink="/product/{{item.id}}">
                 <p>{{item.itemType}}</p>
             </li>
         </ul>
@@ -18,7 +18,7 @@
         <h2>Popular products</h2>
         <ul *ngFor="let item of newProducts">
             <li class="product">
-                <img src="{{item.image}}" alt="">
+                <img src="{{item.image}}" routerLink="/product/{{item.id}}">
                 <p>{{item.itemType}}</p>
             </li>
         </ul>
