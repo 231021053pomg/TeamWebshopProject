@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { NewitemComponent } from './newitem/newitem.component';
+import { BasketComponent } from './basket/basket.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NewitemComponent } from './newitem/newitem.component';
     ProductpageComponent,
     CategorypageComponent,
     AdminpageComponent,
-    NewitemComponent
+    NewitemComponent,
+    BasketComponent
   ],
   imports: [
     BrowserModule,
