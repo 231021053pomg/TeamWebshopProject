@@ -2,43 +2,15 @@
 <div class="wrapper">
 
   <div id="ImgBox">
-    <img class="ProductImg" src="https://cdn-ak.f.st-hatena.com/images/fotolife/p/pepegatwitch/20200306/20200306110940.png" alt="">
+    <img class="ProductImg" src="{{item.image}}" alt="">
   </div>
   <div class="ProductItemBox">
     <div class="ProdcutItemDesc">
-      <h2 id="ProductItemTitel"> Placeholder titel look at this pepega </h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te
-        mpor incididunt ut labore et dolore mag
-        na aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm
-        odo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te
-        mpor incididunt ut labore et dolore mag
-        na aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm
-        odo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te
-        mpor incididunt ut labore et dolore mag
-        na aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm
-        odo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te
-        mpor incididunt ut labore et dolore mag
-        na aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm
-        odo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te
-        mpor incididunt ut labore et dolore mag
-        na aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm
-        odo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-      </p>
-
+      <h2 id="ProductItemTitel">{{item.itemType}}</h2>
+      <p>{{item.discription}}</p>
       <div class="ProductBuyContainer">       
         <div>
-            <label class="PriceTag">500,-     </label>         
+            <label class="PriceTag">{{item.price}}kr</label>         
             <label> Number of items </label>
             <input type="number" id="ProductQuantity" name="quantity" /> 
           <button class="buy-btn" name="ProductBuyButton">Put Into Cart</button>
