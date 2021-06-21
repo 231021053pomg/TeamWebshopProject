@@ -1,6 +1,6 @@
 
 .container{
-    width: 500px;
+    width:450px;
     color: white;
     font-size: 25px;
     margin: 10px 10px 0px 10px;
@@ -11,6 +11,16 @@
     margin: 0px 0px 25px 0px;
     
 }
+
+/* keeps label above input even if sizes are changed (atleast what i wanted it to do) */
+label { display: table-cell; } 
+#idInput{
+    width: 30%;
+}
+#descInput{
+    height: 200px;
+}
+
 .saveButton{
     padding:25px 45px 25px 45px;
     font-size: 25px;
@@ -19,3 +29,7 @@
     
     
 }
+
+
+
+
