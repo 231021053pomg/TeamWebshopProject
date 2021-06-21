@@ -39,6 +39,9 @@
 - Nearly done with the category page few things still needs to be implemented.
 
 ## Eric
+### 21/06/2021
+- Arbejder på basket funktionallitet, største delen er der, men det skal testes igennem
+
 ### 16/06/2021
 - Har tilføjet cors funktionalitet
 
