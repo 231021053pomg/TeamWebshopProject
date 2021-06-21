@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { NewitemComponent } from './newitem/newitem.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     FrontpageComponent,
     ProductpageComponent,
     CategorypageComponent,
-    AdminpageComponent
+    AdminpageComponent,
+    NewitemComponent
   ],
   imports: [
     BrowserModule,
