@@ -8,6 +8,14 @@
       Category selected: {{categories.selectedOptions.selected[0]?.value}}
     </p>
 
+    <div class="AddCategoryDiv">
+      <label>Add Category:</label>
+      <input id="category_Name" #category_Name/>
+    </div>
+
+    <button (click)="addCategory(category_Name.value); category_Name.value = '';">Save</button>
+
+
     <mat-list-option *ngFor="let category of typeOfCategories" [value]="category">
       {{category}}
     </mat-list-option>
