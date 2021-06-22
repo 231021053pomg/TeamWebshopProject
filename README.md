@@ -167,7 +167,7 @@
 
 ### 21/06/2021 - Mandag
 <ul>
-	<li>Completed product page basket just needs to be created and connected up</li>
+	<li>Completed product page, basket just needs to be created and connected up</li>
 	<li>Started on NewItem page, and got very far with it will finnish tommorow hopefully</li>
 </ul>
 
