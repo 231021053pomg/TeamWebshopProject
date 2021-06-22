@@ -16,6 +16,6 @@ namespace TeamWebshopProject.API.CSRD.Services.Interfaces
 
         Task<BasketItem> Delete(int id);
 
-        Task<BasketItem> GetByBasket(Basket basket);
+        Task<List<BasketItem>> GetByBasket(int id);
     }
 }

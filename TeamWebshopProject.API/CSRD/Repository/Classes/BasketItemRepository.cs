@@ -78,11 +78,11 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
             return basketItem;
         }
 
-        public async Task<List<BasketItem>> GetByBasket(Basket basket)
+        public async Task<List<BasketItem>> GetByBasket(int id)
         {
             return await _context.BasketItems
                 .Where(b => b.DeletedAt == null)
-                .Where(b => b.Basket == basket)
+                .Where(b => b.Basket.Id == id)
                 .ToListAsync();
         }
     }

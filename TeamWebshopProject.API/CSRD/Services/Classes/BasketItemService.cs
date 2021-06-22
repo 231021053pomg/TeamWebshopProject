@@ -45,9 +45,9 @@ namespace TeamWebshopProject.API.CSRD.Services.Classes
             return result;
         }
 
-        public async Task<List<BasketItem>> GetByBasket(Basket basket)
+        public async Task<List<BasketItem>> GetByBasket(int id)
         {
-            var result = await _basketItemRepository.GetByBasket(basket);
+            var result = await _basketItemRepository.GetByBasket(id);
             return result;
         }
     }
