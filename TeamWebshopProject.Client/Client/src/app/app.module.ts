@@ -9,10 +9,12 @@ import { ProductpageComponent } from './productpage/productpage.component';
 import { CategorypageComponent } from './categorypage/categorypage.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NewitemComponent } from './newitem/newitem.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { NewitemComponent } from './newitem/newitem.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { NewitemComponent } from './newitem/newitem.component';
     ProductpageComponent,
     CategorypageComponent,
     AdminpageComponent,
-    NewitemComponent
+    NewitemComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { NewitemComponent } from './newitem/newitem.component';
     BrowserAnimationsModule,
     MatListModule,
     MatGridListModule,
+    MatFormFieldModule,
     HttpClientModule
   ],
   providers: [],
