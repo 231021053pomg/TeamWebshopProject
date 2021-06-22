@@ -23,16 +23,23 @@ export class BasketComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = (this.route.snapshot.paramMap.get("id") || 0) as number;
-    this.getBasket(this.id);
+    this.getBasket();
     this.getBasketItems(this.id);
     }
 
-  getBasket(id: number): void {
-      this.basket = this.basketService.getBasket(id) as Basket; 
+  getBasket(): void {
+      this.basket = this.basketService.getBasket() as Basket; 
   }
 
   getBasketItems(id: number): void {
     this.basketService.getBasketItems(id)
-    .subscribe(items => this.basketItems = items);
+    .subscribe((items: BasketItem[]) => this.basketItems = items);
+  }
+
+  removeBasketItem(basketItem: BasketItem): void {
+    if(confirm("Remove {{basketItem.item.itemType}}")) {
+      this.basketItems = this.basketItems.filter(a => a !== basketItem);
+      this.basketService.removeBasketItem(basketItem).subscribe();
+    }
   }
 }

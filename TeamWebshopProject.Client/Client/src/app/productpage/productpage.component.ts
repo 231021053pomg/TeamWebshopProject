@@ -5,6 +5,7 @@ import { catchError, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ProductPageService } from '../product-page.service';
 import { ActivatedRoute } from '@angular/router';
+import { BasketService } from '../basket.service';
 
 @Component({
   selector: 'app-productpage',
@@ -12,38 +13,35 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./productpage.component.css']
 })
 export class ProductpageComponent implements OnInit {
-  apiUrl: string = 'https://localhost:44365/apiItem';
-
-  
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json'})
   };
 
   constructor( 
     private productpageservice: ProductPageService,
-    private http: HttpClient,   private route: ActivatedRoute,) {
-
-   }
+    private basketService: BasketService,
+    private route: ActivatedRoute
+    ) {}
 
     id: number = 0;
     item: Item = { id: 0, itemType: "", price: 0, discount: 0, discription: "", image: "" };
+    quantity: number = 0;
   
-  
-      
-     
-
   ngOnInit(): void {
     this.id = (this.route.snapshot.paramMap.get("id") || 0) as number;
     this.getItem(this.id);
-    
   }
 
   getItem(id: number): void {
     this.productpageservice.getItem(id)
     .subscribe(i => this.item = i);
+  }
 
+  addToBasket(item: Item, quantity: number) : void{
+    this.basketService.addBasketItem(item, quantity)
+    .subscribe();
 
-    
+    console.log("localstorage(basket): " + localStorage.getItem("basket"));
   }
 
     /**

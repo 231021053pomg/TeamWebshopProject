@@ -1,9 +1,20 @@
-<h1>Basket</h1>
 <div class="wrapper">
-    <p>Your basket: {{basket.id}}</p>
+    <h2>Your basket id: {{id}}</h2>
     <ul *ngFor="let product of basketItems">
+        <hr>
         <div class="product">
-            <p>{{product.item.itemType}}</p>
+            <img src="{{product.item.image}}" alt="">
+            <p>Item: {{product.item.itemType}}</p>
+            <p>|</p>
+            <p>Quantity: {{product.quantity}}</p>
+            <p>|</p>
+            <p>Price: {{product.item.price}},-</p>
+            <p>|</p>
+            <p>Total: {{product.quantity * product.item.price}},-</p>
+            <li *ngFor="let tag of product.item.tags">
+                <p>{{tag.name}}</p>
+            </li>
+            <button (click)="removeBasketItem(product)">Remove</button>
         </div>
     </ul>
 </div>

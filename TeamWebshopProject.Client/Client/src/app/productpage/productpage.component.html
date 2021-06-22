@@ -12,8 +12,8 @@
         <div>
             <label class="PriceTag">{{item.price}}kr</label>         
             <label> Number of items </label>
-            <input type="number" id="ProductQuantity" name="quantity" /> 
-          <button class="buy-btn" name="ProductBuyButton">Put Into Cart</button>
+            <input type="number" id="ProductQuantity" name="quantity" value={{quantity}}/> 
+          <button class="buy-btn" name="ProductBuyButton" (click)="addToBasket(item, quantity)">Put Into Cart</button>
         </div>
       </div>
     </div>

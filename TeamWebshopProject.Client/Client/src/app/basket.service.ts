@@ -1,7 +1,7 @@
 import { TOUCH_BUFFER_MS } from '@angular/cdk/a11y';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, ObservableLike, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Basket, BasketItem, Item } from './models';
 
@@ -11,31 +11,29 @@ import { Basket, BasketItem, Item } from './models';
 export class BasketService {
   url = {
     basket: 'https://localhost:44365/api/Basket',
-    basketItem: 'https://localhost:44365/api/BasketItem',
+    basketItem: 'https://localhost:44365/apiBasketItem',
   };
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
   basket: Basket = {};
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.getBasket();
+   }
 
-  getBasket(id: number): Observable<Basket> {
-    if(id == 0) {
-      this.basket = localStorage.getItem("basket") as Basket;
-      return this.basket as Observable<Basket>;
+  getBasket(): Observable<Basket> {
+    var basket = localStorage.getItem("basket") as Basket;
+    if(basket) {
+      this.basket = basket;
     }
     else {
-      return this.http.get<Basket>(`${this.url.basket}/${id}`, this.httpOptions)
-      .pipe(catchError(this.handleError<any>("getBasket")));
+      localStorage.setItem("basket", JSON.stringify(basket));
     }
+    return this.basket as Observable<Basket>;
   }
 
   addBasketItem(item: Item, quantity: number): Observable<BasketItem> {
-    if (this.basket.id == null) {
-      this.basket = this.initializeBasket() as Basket;
-    }
-
     var basketItem: BasketItem = { basket: this.basket, item: item, quantity: quantity };
 
     return this.http.post<BasketItem>(`${this.url.basketItem}`, basketItem, this.httpOptions)

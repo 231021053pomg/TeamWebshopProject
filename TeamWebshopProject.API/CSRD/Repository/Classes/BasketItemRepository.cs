@@ -83,6 +83,7 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
             return await _context.BasketItems
                 .Where(b => b.DeletedAt == null)
                 .Where(b => b.Basket.Id == id)
+                .Include(b => b.Item)
                 .ToListAsync();
         }
     }
