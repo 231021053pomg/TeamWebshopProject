@@ -52,9 +52,14 @@ export class BasketService {
     .pipe(catchError(this.handleError<any>("initializeBasket")));
   }
 
+  getBasketItems(basket: number): Observable<BasketItem[]> {
+    return this.http.get<BasketItem[]>(`${this.url.basketItem}/byBasket/${basket}`)
+    .pipe(catchError(this.handleError<any>("getBasketItems")));
+  }
+
   finalizeBasket() {
 
-  }
+  } 
 
   /**
    * Handle Http operation that failed.

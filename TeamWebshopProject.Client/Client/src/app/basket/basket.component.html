@@ -1,1 +1,9 @@
-<p>basket works!</p>
+<h1>Basket</h1>
+<div class="wrapper">
+    <p>Your basket: {{basket.id}}</p>
+    <ul *ngFor="let product of basketItems">
+        <div class="product">
+            <p>{{product.item.itemType}}</p>
+        </div>
+    </ul>
+</div>
