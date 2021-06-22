@@ -5,6 +5,7 @@ import { ProductpageComponent } from './productpage/productpage.component';
 import { CategorypageComponent } from './categorypage/categorypage.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import { NewitemComponent } from './newitem/newitem.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/front', pathMatch: 'full' },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'product/:id', component: ProductpageComponent },
   { path: 'category', component: CategorypageComponent },
   { path: 'admin', component: AdminpageComponent },
-  { path: 'newitem', component: NewitemComponent}
+  { path: 'newitem', component: NewitemComponent },
+  { path: 'Login', component: LoginFormComponent }
 ];
 
 @NgModule({
