@@ -151,16 +151,27 @@
 
 ### 16/06/2021 - Onsdag
 <ul>
-	<li></li>
+	<li>...</li>
 </ul>
 
 ### 17/06/2021 - Torsdag
 <ul>
-	<li></li>
+	<li>...</li>
 </ul>
 
 ### 18/06/2021 - Fredag
 <ul>
 	<li>Typescript progress finnaly going speeding up.</li>
 	<li>very close to completing product page</li>
+</ul>
+
+### 21/06/2021 - Mandag
+<ul>
+	<li>Completed product page basket just needs to be created and connected up</li>
+	<li>Started on NewItem page, and got very far with it will finnish tommorow hopefully</li>
+</ul>
+
+### 22/06/2021 - Tirsdag
+<ul>
+	<li></li>
 </ul>
