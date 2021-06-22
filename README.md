@@ -173,5 +173,5 @@
 
 ### 22/06/2021 - Tirsdag
 <ul>
-	<li></li>
+	<li>Helped Finnish the CROD on Category</li>
 </ul>
