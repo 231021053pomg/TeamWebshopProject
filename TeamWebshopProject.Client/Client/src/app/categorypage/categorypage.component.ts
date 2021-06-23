@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryPageService } from '../services/categorypage.service';
+import { CategoryPageService } from '../services/category/categorypage.service';
 import { Category } from '../models/domain';
 import { filter } from 'rxjs/operators';
 

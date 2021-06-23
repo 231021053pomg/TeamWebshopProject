@@ -15,7 +15,6 @@ import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardUserComponent } from './board-user/board-user.component';
 import { ProfileComponent } from './profile/profile.component';
-import { ReqisterComponent } from './reqister/reqister.component';
 
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -33,8 +32,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     BoardAdminComponent,
     BoardModeratorComponent,
     BoardUserComponent,
-    ProfileComponent,
-    ReqisterComponent
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
