@@ -12,7 +12,7 @@ import { Item } from '../models';
 })
 export class CategorypageComponent implements OnInit {
   tags: Tag[] = [];
-  products: Item[] = [];
+  products: Item[] = [ ];
 
   selectedTag?: Tag;
 
