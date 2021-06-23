@@ -1,4 +1,24 @@
-<p>newitem works!</p>
+
 <div>
-<p>Edit Titel</p> <input> 
+    <div>
+        <div class="container">
+            <form>
+                <label>Edit Titel </label> <input value="{{item.itemType}}" > <!-- {{item.itemType}} --> 
+                <label>Edit Price</label> <input id="priceInput" value="{{item.price}}">  <!-- {{item.price}} -->
+                <label>Edit Discount</label> <input id="discountInput" value="{{item.discount}}">
+                <label>Edit Image</label> <input value= "{{item.image}}"> <!-- {{item.image}} -->
+                <label>Edit Description</label> <textarea id="descInput">{{item.discription}}</textarea> <!-- {{item.discription}} -->
+            </form>
+        </div>
+    </div>
+    <div>
+        <button class="saveButton">Save</button>
+    </div>
 </div>
+
+
+
+
+
+
+

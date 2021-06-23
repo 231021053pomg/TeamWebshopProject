@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'newitem', component: NewitemComponent},
   { path: 'basket', component: BasketComponent},
   { path: 'basket/:id', component: BasketComponent}
+  { path: 'newitem', component: NewitemComponent },
 ];
 
 @NgModule({

@@ -7,7 +7,19 @@ img {
     width: 5%;
     height: auto;
 }
-
+.container{
+  width:450px;
+  color: white;
+  font-size: 25px;
+}
+.container input{
+  width:75%;
+  height:25px;
+}
+#saveButton{
+  padding: 20px 40px 20px 40px;
+  margin-top: 5px;
+}
 .CategoriesMenu {
   display: block;
   list-style-type: none;
