@@ -26,15 +26,22 @@ export class NewitemComponent implements OnInit {
   ) { }
 
   
-  item: Item = { id: 0, itemType: "", price: 100, discount: 0, discription: "", image: "" };
+  item: Item = { itemType: "", price: 100, discount: 0, discription: "", image: "", tags: [] };
 
   ngOnInit(): void {
     this.id = (this.route.snapshot.paramMap.get("id") || 0) as number;
     this.getItem(this.id);
+    
   }
 
   getItem(id: number):void{
     this.newitemservice.getItem(id)
+    .subscribe(i => this.item = i);
+  }
+
+  postItem() : void{
+    console.log(this.item);
+    this.newitemservice.postItem(this.item)
     .subscribe(i => this.item = i);
   }
 

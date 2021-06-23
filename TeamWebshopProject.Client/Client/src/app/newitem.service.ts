@@ -27,6 +27,11 @@ updateItem(item:Item) : Observable<Item>{
   .pipe(catchError(this.handleError<any>("updateItem")));
 }
 
+postItem(item:Item) : Observable<Item>{
+  return this.http.post<Item>(`${this.apiUrl}`, item, this.httpsOptions)
+  .pipe(catchError(this.handleError<any>("postItem")))
+}
+
 
 /**
     * Handle Http operation that failed.
