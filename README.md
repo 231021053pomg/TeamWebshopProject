@@ -38,6 +38,21 @@
 ### 15/06/2021
 - Nearly done with the category page few things still needs to be implemented.
 
+### 16/06/2021
+- Le sickness
+
+### 17/06/2021
+- Le sickness
+
+### 21/06/2021
+- Started work on login
+
+### 22/06/2021 
+- Continued work on login
+
+### 23/06/2021
+- Dropped work on login as it was not working correctly, finished second version of categories and touching up finishing.
+
 ## Eric
 ### 21/06/2021
 - Arbejder på basket funktionallitet, største delen er der, men det skal testes igennem
