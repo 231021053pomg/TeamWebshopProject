@@ -11,7 +11,7 @@ using TeamWebshopProject.API.CSRD.Services.Interfaces;
 namespace TeamWebshopProject.API.CSRD.Controllers
 {
     [ApiController]
-    [Route("api/author")]
+    [Route("api/login")]
     public class LoginController : Controller
     {
         private readonly ILoginService _loginService;
