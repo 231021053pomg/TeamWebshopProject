@@ -22,8 +22,8 @@ export class TagService {
     return this.http.post<Tag>(`${this.apiUrl}`, tag, this.httpOptions);
   }
 
-  getAllTags(): Observable<Array<Tag>> {
-    return this.http.get<Array<Tag>>(`${this.apiUrl}`, this.httpOptions);
+  getAllTags(): Observable<Tag[]> {
+    return this.http.get<Tag[]>(`${this.apiUrl}`, this.httpOptions);
   }
 
   deleteTag(tag: Tag) : Observable<Tag>{

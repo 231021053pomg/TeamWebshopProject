@@ -60,7 +60,12 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
             var delivery = await _context.Deliveries
                 .FirstOrDefaultAsync(d => d.Id == id);
 
-            delivery.Status = updatedDelivery.Status != null ? updatedDelivery.Status : delivery.Status;
+            if (updatedDelivery != null)
+            {
+                updatedDelivery.EditedAt = DateTime.Now;
+            }
+
+                delivery.Status = updatedDelivery.Status != null ? updatedDelivery.Status : delivery.Status;
 
             _context.Update(delivery);
             await _context.SaveChangesAsync();
