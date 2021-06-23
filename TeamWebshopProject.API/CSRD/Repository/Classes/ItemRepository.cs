@@ -45,6 +45,7 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
         {
             return await _context.Items
                 .Where(i => i.DeletedAt == null)
+                .Include(i => i.Tags)
                 .FirstOrDefaultAsync(i => i.Id == id);
         }
 
@@ -52,6 +53,7 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
         {
             return await _context.Items
                 .Where(i => i.DeletedAt == null)
+                .Include(i => i.Tags)
                 .ToListAsync();
         }
 
