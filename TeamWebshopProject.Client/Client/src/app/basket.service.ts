@@ -16,28 +16,49 @@ export class BasketService {
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
-  basket: Basket = {};
+  basket: Basket = { customer: {
+    login: {
+      id: 1,
+      accessType: "Customer",
+      email: "email@email.email",
+      password: "password",
+    },
+    credit: {
+      "creditAmount": 100,
+      "id": 4
+    },
+    userName: "Username",
+    firstName: "FirstName",
+    lastName: "LastName",
+    birthDay: new Date,
+    addressStreet: "Streetname",
+    addressNumber: 420,
+    addressPostCode: 1337,
+  }, quantity: 0, price: 0, created: new Date};
 
   constructor(private http: HttpClient) {
     this.getBasket();
    }
 
   getBasket(): Observable<Basket> {
-    var basket = localStorage.getItem("basket") as Basket;
-    if(basket) {
-      this.basket = basket;
-    }
-    else {
-      localStorage.setItem("basket", JSON.stringify(basket));
-    }
+    // var basket = localStorage.getItem("basket") as Basket;
+    // if(basket != null) {
+    //   this.basket = basket;
+    // }
+    // else {
+      // localStorage.setItem("basket", JSON.stringify(basket));
+    // }
     return this.basket as Observable<Basket>;
   }
 
   addBasketItem(item: Item, quantity: number): Observable<BasketItem> {
-    var basketItem: BasketItem = { basket: this.basket, item: item, quantity: quantity };
+    var basketItem: BasketItem = { basket: this.basket, item: item, quantity: quantity};
+
+    console.log("Item:");
+    console.log(basketItem);
 
     return this.http.post<BasketItem>(`${this.url.basketItem}`, basketItem, this.httpOptions)
-    .pipe(catchError(this.handleError<any>("addBasketItem")));
+      .pipe(catchError(this.handleError<any>("addBasketItem")));
   }
 
   removeBasketItem(item: BasketItem): Observable<BasketItem> {
@@ -69,7 +90,6 @@ export class BasketService {
     return (error: any): Observable<T> => {
       // TODO: send the error to remote logging infrastructure
       console.error(error); // log to console instead
-
       // TODO: better job of transforming error for user consumption
       console.log(`${operation} failed: ${error.message}`);
 

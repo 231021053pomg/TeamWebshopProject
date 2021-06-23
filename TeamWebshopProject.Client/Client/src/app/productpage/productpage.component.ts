@@ -25,7 +25,7 @@ export class ProductpageComponent implements OnInit {
 
     id: number = 0;
     item: Item = { id: 0, itemType: "", price: 0, discount: 0, discription: "", image: "" };
-    quantity: number = 0;
+    quantity: number = 1;
   
   ngOnInit(): void {
     this.id = (this.route.snapshot.paramMap.get("id") || 0) as number;
@@ -38,6 +38,9 @@ export class ProductpageComponent implements OnInit {
   }
 
   addToBasket(item: Item, quantity: number) : void{
+    console.log("item:");
+    console.log(item);
+    console.log(quantity);
     this.basketService.addBasketItem(item, quantity)
     .subscribe();
 
