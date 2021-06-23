@@ -41,7 +41,7 @@ import { EditCustomersComponent } from './edit-customers/edit-customers.componen
     NewitemComponent,
     BasketComponent,
     TagComponent,
-    EdititemComponent
+    EdititemComponent,
     AllTagsComponent,
     CustomerComponent,
     AllCustomersComponent,
