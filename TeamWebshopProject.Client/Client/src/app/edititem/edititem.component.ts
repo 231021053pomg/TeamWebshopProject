@@ -22,7 +22,7 @@ export class EdititemComponent implements OnInit {
   constructor(
     private edititemservice: NewitemService,
     private http: HttpClient, private route: ActivatedRoute,
-  ) { }
+  ) {  }
 
   item: Item = { id: 0, itemType: "", price: 100, discount: 0, discription: "", image: "" };
 
