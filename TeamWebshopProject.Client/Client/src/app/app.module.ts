@@ -22,6 +22,7 @@ import { BasketComponent } from './basket/basket.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { TagComponent } from './tag/tag.component';
 import { FormsModule } from '@angular/forms';
+import { AllTagsComponent } from './all-tags/all-tags.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FormsModule } from '@angular/forms';
     ProfileComponent,
     NewitemComponent,
     BasketComponent,
-    TagComponent
+    TagComponent,
+    AllTagsComponent
   ],
   imports: [
     BrowserModule,
