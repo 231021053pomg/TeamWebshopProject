@@ -1,0 +1,6 @@
+<div class="wrapper">
+    <ul *ngFor="let customer of customers">
+        <a routerLink="editCustomer/{{customer.id}}">{{customer.firstName}} {{customer.lastName}}</a>
+        <button (click)="deleteCustomer(customer)">Delete</button>
+    </ul>
+</div>

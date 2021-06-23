@@ -23,6 +23,9 @@ import { TagComponent } from './tag/tag.component';
 import { FormsModule } from '@angular/forms';
 import { AllTagsComponent } from './all-tags/all-tags.component';
 import { EdititemComponent } from './edititem/edititem.component';
+import { CustomerComponent } from './customer/customer.component';
+import { AllCustomersComponent } from './all-customers/all-customers.component';
+import { EditCustomersComponent } from './edit-customers/edit-customers.component';
 
 @NgModule({
   declarations: [
@@ -38,8 +41,11 @@ import { EdititemComponent } from './edititem/edititem.component';
     NewitemComponent,
     BasketComponent,
     TagComponent,
-    AllTagsComponent,   
-    EdititemComponent
+    EdititemComponent,
+    AllTagsComponent,
+    CustomerComponent,
+    AllCustomersComponent,
+    EditCustomersComponent
   ],
   imports: [
     BrowserModule,

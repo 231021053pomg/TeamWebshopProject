@@ -1,0 +1,8 @@
+.wrapper {
+    color: white;
+}
+
+.wrapper input{
+    display: inline;
+    width: 100%;
+}

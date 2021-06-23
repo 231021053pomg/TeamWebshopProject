@@ -48,7 +48,7 @@ export interface Item {
 }
 
 export interface Login {
-    id: number;
+    id?: number;
     accessType: string;
     email: string;
     password: string;
