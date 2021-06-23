@@ -18,6 +18,7 @@ import { ProfileComponent } from './profile/profile.component';
 
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { BasketComponent } from './basket/basket.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
@@ -27,12 +28,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ProductpageComponent,
     CategorypageComponent,
     AdminpageComponent,
-    NewitemComponent,
     HomeComponent,
     BoardAdminComponent,
     BoardModeratorComponent,
     BoardUserComponent,
-    ProfileComponent
+    ProfileComponent,
+    NewitemComponent,
+    BasketComponent
   ],
   imports: [
     BrowserModule,

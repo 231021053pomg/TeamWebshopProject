@@ -77,5 +77,14 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
 
             return basketItem;
         }
+
+        public async Task<List<BasketItem>> GetByBasket(int id)
+        {
+            return await _context.BasketItems
+                .Where(b => b.DeletedAt == null)
+                .Where(b => b.Basket.Id == id)
+                .Include(b => b.Item)
+                .ToListAsync();
+        }
     }
 }

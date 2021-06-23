@@ -154,5 +154,36 @@ namespace TeamWebshopProject.API.CSRD.Controllers
                 return Problem(ex.Message);
             }
         }
+
+        //Get by Basket
+        [HttpGet("byBasket/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetByBasket([FromRoute] int id)
+        {
+            try
+            {
+                var basketItems = await _basketItemService.GetByBasket(id);
+                if (basketItems == null)
+                {
+                    // something has gone wrong serverside, return code 500
+                    return Problem("Unexpected null returned from service");
+                }
+                else if (basketItems.Count == 0)
+                {
+                    // no  data exist, but evertything is still ok, return code 204
+                    return NoContent();
+                }
+                // we got data! return with code 200
+                return Ok(basketItems);
+
+            }
+            catch (Exception ex)
+            {
+                //handle any other exeptons raised by sending code 500
+                return Problem(ex.Message);
+            }
+        }
     }
 }
