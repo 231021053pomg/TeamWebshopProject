@@ -23,6 +23,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { TagComponent } from './tag/tag.component';
 import { FormsModule } from '@angular/forms';
 import { AllTagsComponent } from './all-tags/all-tags.component';
+import { CustomerComponent } from './customer/customer.component';
+import { AllCustomersComponent } from './all-customers/all-customers.component';
+import { EditCustomersComponent } from './edit-customers/edit-customers.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { AllTagsComponent } from './all-tags/all-tags.component';
     NewitemComponent,
     BasketComponent,
     TagComponent,
-    AllTagsComponent
+    AllTagsComponent,
+    CustomerComponent,
+    AllCustomersComponent,
+    EditCustomersComponent
   ],
   imports: [
     BrowserModule,
