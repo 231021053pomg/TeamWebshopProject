@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, ObservableLike } from 'rxjs';
 import { Tag } from './models';
 
 @Injectable({
@@ -21,4 +21,12 @@ export class TagService {
   newTag(tag: Tag): Observable<Tag> {
     return this.http.post<Tag>(`${this.apiUrl}`, tag, this.httpOptions);
   }
+
+  getAllTags(): Observable<Tag[]> {
+    return this.http.get<Tag[]>(`${this.apiUrl}`, this.httpOptions);
+  }
+
+  deleteTag(tag: Tag) : Observable<Tag>{
+    return this.http.delete<Tag>(`${this.apiUrl}/${tag.id}`, this.httpOptions);
+  };
 }

@@ -14,7 +14,6 @@ import { HomeComponent } from './home/home.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardUserComponent } from './board-user/board-user.component';
-import { ProfileComponent } from './profile/profile.component';
 
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -22,6 +21,7 @@ import { BasketComponent } from './basket/basket.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { TagComponent } from './tag/tag.component';
 import { FormsModule } from '@angular/forms';
+import { AllTagsComponent } from './all-tags/all-tags.component';
 import { EdititemComponent } from './edititem/edititem.component';
 
 @NgModule({
@@ -35,10 +35,10 @@ import { EdititemComponent } from './edititem/edititem.component';
     BoardAdminComponent,
     BoardModeratorComponent,
     BoardUserComponent,
-    ProfileComponent,
     NewitemComponent,
     BasketComponent,
     TagComponent,
+    AllTagsComponent,   
     EdititemComponent
   ],
   imports: [

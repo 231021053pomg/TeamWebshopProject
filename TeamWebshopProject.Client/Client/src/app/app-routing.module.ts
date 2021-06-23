@@ -7,6 +7,7 @@ import { AdminpageComponent } from './adminpage/adminpage.component';
 import { NewitemComponent } from './newitem/newitem.component';
 import { BasketComponent } from './basket/basket.component';
 import { TagComponent } from './tag/tag.component';
+import { AllTagsComponent } from './all-tags/all-tags.component';
 import { EdititemComponent } from './edititem/edititem.component';
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'basket/:id', component: BasketComponent},
   { path: 'newitem', component: NewitemComponent },
   { path: 'tag', component: TagComponent },
+  { path: 'AllTags', component: AllTagsComponent },
 ];
 
 @NgModule({
