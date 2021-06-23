@@ -6,6 +6,7 @@ import { CategorypageComponent } from './categorypage/categorypage.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import { NewitemComponent } from './newitem/newitem.component';
 import { BasketComponent } from './basket/basket.component';
+import { EdititemComponent } from './edititem/edititem.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/front', pathMatch: 'full' },
@@ -14,9 +15,10 @@ const routes: Routes = [
   { path: 'category', component: CategorypageComponent },
   { path: 'admin', component: AdminpageComponent },
   { path: 'newitem', component: NewitemComponent},
+  {path: 'edititem/:id', component: EdititemComponent},
   { path: 'basket', component: BasketComponent},
   { path: 'basket/:id', component: BasketComponent},
-  { path: 'newitem', component: NewitemComponent },
+
 ];
 
 @NgModule({

@@ -9,6 +9,7 @@ import { Item } from './models';
 })
 export class NewitemService {
   apiUrl: string = 'https://localhost:44365/apiItem'
+  
 
   httpsOptions = {
     headers: new HttpHeaders({ 'Content-Type' : 'application/json'})
@@ -19,6 +20,11 @@ export class NewitemService {
 getItem(id:number) : Observable<Item>{
   return this.http.get<Item>(`${this.apiUrl}/${id}`, this.httpsOptions)
   .pipe(catchError(this.handleError<any>("getItem")));
+}
+
+updateItem(item:Item) : Observable<Item>{
+  return this.http.put<Item>(`${this.apiUrl}/${item.id}`, item, this.httpsOptions)
+  .pipe(catchError(this.handleError<any>("updateItem")));
 }
 
 

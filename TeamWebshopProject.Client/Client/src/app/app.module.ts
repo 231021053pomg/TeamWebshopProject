@@ -20,6 +20,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { BasketComponent } from './basket/basket.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { EdititemComponent } from './edititem/edititem.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     BoardUserComponent,
     ProfileComponent,
     NewitemComponent,
-    BasketComponent
+    BasketComponent,
+    EdititemComponent
   ],
   imports: [
     BrowserModule,
