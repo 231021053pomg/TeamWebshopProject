@@ -14,7 +14,6 @@ import { HomeComponent } from './home/home.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardUserComponent } from './board-user/board-user.component';
-import { ProfileComponent } from './profile/profile.component';
 
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -35,7 +34,6 @@ import { AllTagsComponent } from './all-tags/all-tags.component';
     BoardAdminComponent,
     BoardModeratorComponent,
     BoardUserComponent,
-    ProfileComponent,
     NewitemComponent,
     BasketComponent,
     TagComponent,

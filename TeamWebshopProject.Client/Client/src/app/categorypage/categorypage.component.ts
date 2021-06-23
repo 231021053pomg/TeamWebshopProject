@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryPageService } from '../services/category/categorypage.service';
-import { Category } from '../models/domain';
-import { filter } from 'rxjs/operators';
+import { Tag } from '../models';
+import { TagService } from '../tag.service';
+import { Item } from '../models';
 
 @Component({
   selector: 'app-categorypage',
@@ -9,31 +9,16 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./categorypage.component.css']
 })
 export class CategorypageComponent implements OnInit {
-  categorytCat_Name: string = "Pepe";
+  tags: Tag[] = [];
 
-  typeOfCategories: Category[] = [];
-
-  constructor(
-    private categoryService: CategoryPageService
-  ) { }
+  constructor(private tagService: TagService) { }
 
   ngOnInit(): void {
-    this.getCategories();
+    this.getAllTags();
+
   }
 
-  getCategories(): void {
-    this.categoryService.getCategories().subscribe(category => this.typeOfCategories = category);
+  getAllTags(): void {
+    this.tagService.getAllTags().subscribe(tag => this.tags = tag);
   }
-
-  addCategory(category_Name: string): void {
-    this.categoryService.addCategory({ category_Name } as Category).subscribe(category => { this.typeOfCategories.push(category) });
-  }
-
-  deleteCategory(category: Category): void {
-    if (confirm('Confirm that you want to delete this category: ${category.category_Name}')) {
-      this.typeOfCategories = this.typeOfCategories.filter(a => a !== category);
-      this.categoryService.deleteCategory(category.id).subscribe();
-    }
-  }
-
 }
