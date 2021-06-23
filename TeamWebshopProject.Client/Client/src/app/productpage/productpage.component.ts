@@ -41,7 +41,11 @@ export class ProductpageComponent implements OnInit {
     this.productpageservice.getItem(id)
     .subscribe(i => this.item = i);
   }
-
+deleteItem(item:Item): void{
+  if(confirm("Are you sure about that")){
+    this.productpageservice.deleteItem(item).subscribe();
+  }
+}
   addToBasket(item: Item, quantity: number) : void{
     console.log("item:");
     console.log(item);
@@ -51,5 +55,6 @@ export class ProductpageComponent implements OnInit {
 
     console.log("localstorage(basket): " + localStorage.getItem("basket"));
   }
+  
 
 }

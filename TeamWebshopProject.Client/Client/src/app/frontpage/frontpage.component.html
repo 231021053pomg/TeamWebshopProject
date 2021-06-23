@@ -14,16 +14,9 @@
             </li>
         </ul>
     </div>
-    <div class="popularProducts section">
-        <h2>Popular products</h2>
-        <ul *ngFor="let item of newProducts">
-            <li class="product">
-                <img src="{{item.image}}" routerLink="/product/{{item.id}}">
-                <p>{{item.itemType}}</p>
-            </li>
-        </ul>
-    </div>
+
 </div>
+
 
   
 <router-outlet></router-outlet>
