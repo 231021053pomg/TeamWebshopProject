@@ -18,7 +18,7 @@
         </div>
         <div name="Delete & Edit Product buttons">
         <button routerLink="/edititem/{{item.id}}" style="margin-right: 5px; ">Edit </button>
-        <button>Delete</button>
+        <button (click)="deleteItem(item)">Delete</button>
       </div>
       </div>
     </div>
