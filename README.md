@@ -179,4 +179,5 @@
 ### 23/06/2021 - Onsdag
 <ul>
 	<li>Got Item create/edit & delete up and working and implemented.</li>
+	<li> I merged all my branches into Development so it is ready to get merged into master. </li>
 </ul>
