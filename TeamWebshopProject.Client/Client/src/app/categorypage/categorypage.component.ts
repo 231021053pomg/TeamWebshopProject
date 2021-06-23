@@ -19,7 +19,8 @@ export class CategorypageComponent implements OnInit {
 
   onSelect(tag: Tag): void {
     this.selectedTag = tag;
-    this.showedProducts = this.products.filter(p => p.tags?.includes(tag));
+
+    this.showedProducts = this.products.filter(p => p.tags?.some(t => t.id === tag.id));
   }
 
   constructor(private tagService: TagService, private frontpageService: FrontpageService) { }
