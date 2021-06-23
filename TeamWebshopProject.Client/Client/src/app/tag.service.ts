@@ -18,6 +18,10 @@ export class TagService {
     private http: HttpClient
   ) { }
 
+  getTag(id: number) :Observable<Tag> {
+    return this.http.get<Tag>(`${this.apiUrl}/${id}`, this.httpOptions);
+  }
+
   newTag(tag: Tag): Observable<Tag> {
     return this.http.post<Tag>(`${this.apiUrl}`, tag, this.httpOptions);
   }
@@ -29,4 +33,8 @@ export class TagService {
   deleteTag(tag: Tag) : Observable<Tag>{
     return this.http.delete<Tag>(`${this.apiUrl}/${tag.id}`, this.httpOptions);
   };
+
+  updateTag(tag: Tag) : Observable<Tag> {
+    return this.http.put<Tag>(`${this.apiUrl}/${tag.id}`, tag, this.httpOptions);
+  }
 }

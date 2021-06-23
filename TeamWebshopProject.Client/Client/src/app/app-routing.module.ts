@@ -11,6 +11,7 @@ import { AllTagsComponent } from './all-tags/all-tags.component';
 import { EdititemComponent } from './edititem/edititem.component';
 import { CustomerComponent } from './customer/customer.component';
 import { AllCustomersComponent } from './all-customers/all-customers.component';
+import { EditTagComponent } from './edit-tag/edit-tag.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/front', pathMatch: 'full' },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'AllTags', component: AllTagsComponent },
   { path: 'customer', component: CustomerComponent },
   { path: 'allcustomers', component: AllCustomersComponent },
+  { path: 'editTag/:id', component: EditTagComponent },
 ];
 
 @NgModule({

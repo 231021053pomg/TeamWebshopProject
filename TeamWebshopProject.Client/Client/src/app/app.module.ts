@@ -26,6 +26,7 @@ import { EdititemComponent } from './edititem/edititem.component';
 import { CustomerComponent } from './customer/customer.component';
 import { AllCustomersComponent } from './all-customers/all-customers.component';
 import { EditCustomersComponent } from './edit-customers/edit-customers.component';
+import { EditTagComponent } from './edit-tag/edit-tag.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { EditCustomersComponent } from './edit-customers/edit-customers.componen
     AllTagsComponent,
     CustomerComponent,
     AllCustomersComponent,
-    EditCustomersComponent
+    EditCustomersComponent,
+    EditTagComponent
   ],
   imports: [
     BrowserModule,
