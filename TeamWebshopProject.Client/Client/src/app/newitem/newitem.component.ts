@@ -30,14 +30,14 @@ export class NewitemComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = (this.route.snapshot.paramMap.get("id") || 0) as number;
-    this.getItem(this.id);
+    // this.getItem(this.id);
     
   }
 
-  getItem(id: number):void{
-    this.newitemservice.getItem(id)
-    .subscribe(i => this.item = i);
-  }
+  // getItem(id: number):void{
+  //   this.newitemservice.getItem(id)
+  //   .subscribe(i => this.item = i);
+  // }
 
   postItem() : void{
     console.log(this.item);
