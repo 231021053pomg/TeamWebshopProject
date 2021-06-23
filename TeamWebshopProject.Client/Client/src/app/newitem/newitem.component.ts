@@ -26,7 +26,7 @@ export class NewitemComponent implements OnInit {
   ) { }
 
   
-  item: Item = { itemType: "", price: 100, discount: 0, discription: "", image: "" };
+  item: Item = { id: 0, itemType: "", price: 100, discount: 0, discription: "", image: "" };
 
   ngOnInit(): void {
     this.id = (this.route.snapshot.paramMap.get("id") || 0) as number;

@@ -7,17 +7,19 @@
   }
 
 body {
-    background-color: #000000;
-    background: linear-gradient(to bottom right, var(--pepe-blue) 50%, #fff);
-    background-repeat: no-repeat;
-    overflow: hidden;
+  background-color: #000000;
+  background: linear-gradient(to bottom right, var(--pepe-blue) 50%, #fff);
+  background-repeat: no-repeat;
+  
+ 
 }
 
 html {
-    height: 100%;
+   height: 100%; 
+   
 }
 
-html, body { height: 100%; }
+html, body { height: 100%; overflow-y:scroll;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 html, body { height: 100%; }

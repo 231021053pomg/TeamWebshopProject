@@ -1,19 +1,27 @@
 <div class="CategoryPageContent">
+
   <mat-selection-list #categories [multiple]="false">
-    <img matListAvatar src="https://s.starladder.com/uploads/team_logo/b/7/e/6/thumb_270_5deb1aab54ed73c70398c6ba19a99e9c.jpg" />
+    <img matListAvatar
+      src="https://s.starladder.com/uploads/team_logo/b/7/e/6/thumb_270_5deb1aab54ed73c70398c6ba19a99e9c.jpg" />
 
     <h2> Pepe categories </h2>
 
     <p>
       Category selected: {{categories.selectedOptions.selected[0]?.value}}
     </p>
+    <div class="container">
+      <div class="AddCategoryDiv">
+        <label>Add Category:</label>
+        <input id="category_Name" #category_Name />
 
-    <div class="AddCategoryDiv">
-      <label>Add Category:</label>
-      <input id="category_Name" #category_Name/>
+
+      </div>
+      <div>
+        <label>Delete Category:</label>
+        <input id="category_Delete" #category_Delete  >
+      </div>
     </div>
-
-    <button (click)="addCategory(category_Name.value); category_Name.value = '';">Save</button>
+    <button id="saveButton" (click)="addCategory(category_Name.value); category_Name.value = '';">Save</button>
 
 
     <mat-list-option *ngFor="let category of typeOfCategories" [value]="category">

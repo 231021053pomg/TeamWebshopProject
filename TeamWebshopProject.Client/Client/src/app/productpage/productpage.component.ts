@@ -27,6 +27,7 @@ export class ProductpageComponent implements OnInit {
    }
 
 
+    
     item: Item = { id: 0, itemType: "", price: 0, discount: 0, discription: "", image: "" };
   
   
