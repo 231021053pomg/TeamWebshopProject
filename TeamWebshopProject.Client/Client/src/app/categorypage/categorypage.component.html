@@ -1,6 +1,24 @@
-<ul *ngFor="let tag of tags">
-  <li>
-    <a routerLink="" routerLinkActive="active">{{tag.name}}</a>
+<h2>Categories</h2>
+
+<ul class="categories">
+  <li *ngFor="let tag of tags"
+    [class.selected]="tag === selectedTag"
+    (click)="onSelect(tag)">
+    <span class="badge">{{tag.name}}</span>
   </li>
 </ul>
 
+<div *ngIf="selectedTag">
+  <h2>{{selectedTag.name}}</h2>
+
+  <div><span>id:</span>{{selectedTag.id}}</div>
+
+  <div class="product-showcase">
+    <ul *ngFor="let item of products">
+      <li class="product">
+        <img src="{{item.image}}" routerLink="/product/{{item.id}}" />
+        <p>{{item.itemType}}</p>
+      </li> 
+    </ul>
+  </div>
+</div>
