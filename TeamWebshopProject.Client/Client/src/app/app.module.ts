@@ -20,6 +20,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { BasketComponent } from './basket/basket.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { TagComponent } from './tag/tag.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     BoardUserComponent,
     ProfileComponent,
     NewitemComponent,
-    BasketComponent
+    BasketComponent,
+    TagComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatListModule,
     MatGridListModule,
     MatFormFieldModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
