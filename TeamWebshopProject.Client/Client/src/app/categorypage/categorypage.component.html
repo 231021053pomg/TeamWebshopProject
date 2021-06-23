@@ -14,7 +14,7 @@
   <div><span>id:</span>{{selectedTag.id}}</div>
 
   <div class="product-showcase">
-    <ul *ngFor="let item of products">
+    <ul *ngFor="let item of showedProducts">
       <li class="product">
         <img src="{{item.image}}" routerLink="/product/{{item.id}}" />
         <p>{{item.itemType}}</p>
