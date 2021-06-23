@@ -175,3 +175,8 @@
 <ul>
 	<li>Helped Finnish the CROD on Category</li>
 </ul>
+
+### 23/06/2021 - Onsdag
+<ul>
+	<li>Got Item create/edit & delete up and working and implemented.</li>
+</ul>
