@@ -20,6 +20,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { BasketComponent } from './basket/basket.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { TagComponent } from './tag/tag.component';
+import { FormsModule } from '@angular/forms';
 import { EdititemComponent } from './edititem/edititem.component';
 
 @NgModule({
@@ -36,6 +38,7 @@ import { EdititemComponent } from './edititem/edititem.component';
     ProfileComponent,
     NewitemComponent,
     BasketComponent,
+    TagComponent,
     EdititemComponent
   ],
   imports: [
@@ -45,7 +48,8 @@ import { EdititemComponent } from './edititem/edititem.component';
     MatListModule,
     MatGridListModule,
     MatFormFieldModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
