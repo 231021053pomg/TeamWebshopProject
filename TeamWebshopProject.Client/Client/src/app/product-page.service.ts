@@ -29,7 +29,10 @@ export class ProductPageService {
   }
 
 
-
+  deleteItem(item:Item) : Observable<Item>{
+    return this.http.delete<Item>(`${this.apiUrl}/${item.id}`, this.httpOptions)
+    .pipe(catchError(this.handleError<any>("deleteItem")));
+  }
 
 
 

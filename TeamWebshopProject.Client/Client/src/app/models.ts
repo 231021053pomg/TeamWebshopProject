@@ -38,7 +38,7 @@ export interface Delivery {
 }
 
 export interface Item {
-    id: number;
+    id?: number;
     itemType: string;
     price: number;
     discount: number;
@@ -48,7 +48,7 @@ export interface Item {
 }
 
 export interface Login {
-    id: number;
+    id?: number;
     accessType: string;
     email: string;
     password: string;

@@ -14,7 +14,12 @@
             <label> Number of items </label>
             <input type="number" id="ProductQuantity" name="quantity" value={{quantity}}/> 
           <button class="buy-btn" name="ProductBuyButton" (click)="addToBasket(item, quantity)">Put Into Cart</button>
+          
         </div>
+        <div name="Delete & Edit Product buttons">
+        <button routerLink="/edititem/{{item.id}}" style="margin-right: 5px; ">Edit </button>
+        <button (click)="deleteItem(item)">Delete</button>
+      </div>
       </div>
     </div>
 
