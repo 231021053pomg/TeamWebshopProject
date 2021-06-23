@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminpageComponent },
   { path: 'newitem', component: NewitemComponent},
   { path: 'basket', component: BasketComponent},
-  { path: 'basket/:id', component: BasketComponent}
+  { path: 'basket/:id', component: BasketComponent},
   { path: 'newitem', component: NewitemComponent },
 ];
 

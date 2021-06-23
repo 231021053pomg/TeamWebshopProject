@@ -18,7 +18,6 @@ import { ProfileComponent } from './profile/profile.component';
 
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { NewitemComponent } from './newitem/newitem.component';
 import { BasketComponent } from './basket/basket.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
@@ -33,7 +32,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     BoardAdminComponent,
     BoardModeratorComponent,
     BoardUserComponent,
-    ProfileComponent
+    ProfileComponent,
     NewitemComponent,
     BasketComponent
   ],
