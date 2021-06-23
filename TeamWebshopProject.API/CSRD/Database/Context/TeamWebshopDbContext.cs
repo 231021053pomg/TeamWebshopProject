@@ -11,7 +11,9 @@ namespace TeamWebshopProject.API.Database.Context
     {
         public TeamWebshopDbContext() { }
 
-        public TeamWebshopDbContext(DbContextOptions<TeamWebshopDbContext> options):base(options) { }
+        public TeamWebshopDbContext(DbContextOptions<TeamWebshopDbContext> options) : base(options) {
+            
+        }
 
         public DbSet<Basket> Baskets { get; set; }
 

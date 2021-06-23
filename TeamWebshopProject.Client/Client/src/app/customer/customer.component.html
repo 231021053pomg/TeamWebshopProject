@@ -1,0 +1,21 @@
+<div class="wrapper">
+    <label>Email</label>
+    <input [(ngModel)]="login.email">
+    <label>Password</label>
+    <input [(ngModel)]="login.password">
+    <label>Username</label>
+    <input [(ngModel)]="customer.userName">
+    <label>First Name</label>
+    <input [(ngModel)]="customer.firstName">
+    <label>Last Name</label>
+    <input [(ngModel)]="customer.lastName">
+    <label>BirthDay</label>
+    <input type="date" [(ngModel)]="customer.birthDay">
+    <label>Address</label>
+    <input [(ngModel)]="customer.addressStreet">
+    <label>House Number</label>
+    <input [(ngModel)]="customer.addressNumber">
+    <label>Postcode</label>
+    <input [(ngModel)]="customer.addressPostCode">
+    <button (click)="newCustomer()">New</button>
+</div>

@@ -1,4 +1,24 @@
-<p>newitem works!</p>
+
 <div>
-<p>Edit Titel</p> <input> 
+    <div>
+        <div class="container">
+
+            <label>Edit Titel </label> <input [(ngModel)]="item.itemType">
+            <label>Edit Price</label> <input [(ngModel)]="item.price">
+            <label>Edit Discount</label> <input [(ngModel)]="item.discount">
+            <label>Edit Image</label> <input [(ngModel)]="item.image">
+            <label>Edit Description</label> <textarea  [(ngModel)]="item.discription"></textarea>
+     
+        </div>
+    </div>
+    <div>
+        <button (click)="postItem()" class="saveButton">Save</button>
+    </div>
 </div>
+
+
+
+
+
+
+

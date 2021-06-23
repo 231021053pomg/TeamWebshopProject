@@ -1,0 +1,6 @@
+<div class="wrapper">
+    <ul *ngFor="let tag of tags">
+        <a routerLink="/editTag/{{tag.id}}">{{tag.name}}</a>
+        <button (click)="deleteTag(tag)">Delete</button>
+    </ul>
+</div>

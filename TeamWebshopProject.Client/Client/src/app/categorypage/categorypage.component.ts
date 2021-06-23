@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryPageService } from '../services/categorypage.service';
-import { Category } from '../models/domain';
-import { filter } from 'rxjs/operators';
+import { Tag } from '../models';
+import { TagService } from '../tag.service';
+import { FrontpageService } from '../frontpage.service';
+
+import { Item } from '../models';
 
 @Component({
   selector: 'app-categorypage',
@@ -9,31 +11,27 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./categorypage.component.css']
 })
 export class CategorypageComponent implements OnInit {
-  categorytCat_Name: string = "Pepe";
+  tags: Tag[] = [];
+  products: Item[] = [ ];
 
-  typeOfCategories: Category[] = [];
+  selectedTag?: Tag;
 
-  constructor(
-    private categoryService: CategoryPageService
-  ) { }
+  onSelect(tag: Tag): void {
+    this.selectedTag = tag;
+  }
+
+  constructor(private tagService: TagService, private frontpageService: FrontpageService) { }
 
   ngOnInit(): void {
-    this.getCategories();
+    this.getAllTags();
+    this.getNewProducts();
   }
 
-  getCategories(): void {
-    this.categoryService.getCategories().subscribe(category => this.typeOfCategories = category);
+  getAllTags(): void {
+    this.tagService.getAllTags().subscribe(tag => this.tags = tag);
   }
 
-  addCategory(category_Name: string): void {
-    this.categoryService.addCategory({ category_Name } as Category).subscribe(category => { this.typeOfCategories.push(category) });
+  getNewProducts(): void {
+    this.frontpageService.getNewItems().subscribe(items => this.products = items);
   }
-
-  deleteCategory(category: Category): void {
-    if (confirm('Confirm that you want to delete this category: ${category.category_Name}')) {
-      this.typeOfCategories = this.typeOfCategories.filter(a => a !== category);
-      this.categoryService.deleteCategory(category.id).subscribe();
-    }
-  }
-
 }

@@ -1,13 +1,13 @@
 export interface Basket {
-    id: number;
-    customer: Customer;
-    quantity: number;
-    price: number;
-    created: Date;
+    id?: number;
+    customer?: Customer;
+    quantity?: number;
+    price?: number;
+    created?: Date;
 }
 
 export interface BasketItem {
-    id: number;
+    id?: number;
     basket: Basket;
     item: Item;
     quantity: number;
@@ -19,16 +19,16 @@ export interface Credit {
 }
 
 export interface Customer {
-    id: number;
-    login: Login;
-    credit: Credit;
-    userName: string;
-    firstName: string;
-    lastName: string;
-    birthDay: Date;
-    addressStreet: string;
-    addressNumber: number;
-    addressPostCode: number;
+    id?: number;
+    login?: Login;
+    credit?: Credit;
+    userName?: string;
+    firstName?: string;
+    lastName?: string;
+    birthDay?: Date;
+    addressStreet?: string;
+    addressNumber?: number;
+    addressPostCode?: number;
 }
 
 export interface Delivery {
@@ -38,7 +38,7 @@ export interface Delivery {
 }
 
 export interface Item {
-    id: number;
+    id?: number;
     itemType: string;
     price: number;
     discount: number;
@@ -48,7 +48,7 @@ export interface Item {
 }
 
 export interface Login {
-    id: number;
+    id?: number;
     accessType: string;
     email: string;
     password: string;
@@ -68,6 +68,6 @@ export interface OrderItem {
 }
 
 export interface Tag {
-    id: number;
+    id?: number;
     name: string;
 }

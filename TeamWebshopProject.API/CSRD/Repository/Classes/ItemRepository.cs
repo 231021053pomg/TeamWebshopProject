@@ -59,6 +59,10 @@ namespace TeamWebshopProject.API.CSRD.Repository.Classes
         {
             var item = await _context.Items
                 .FirstOrDefaultAsync(i => i.Id == id);
+            if (item != null)
+            {
+                item.EditedAt = DateTime.Now;
+            }
 
             item.ItemType = updatedItem.ItemType != null ? updatedItem.ItemType : item.ItemType;
 

@@ -1,0 +1,36 @@
+
+.container{
+    width:450px;
+    color: white;
+    font-size: 25px;
+    margin: 10px 10px 0px 10px;
+}
+.container input{
+    width:100%;
+    height:25px;
+    margin: 0px 0px 25px 0px;
+    
+}
+
+/* keeps label above input even if sizes are changed (atleast what i wanted it to do) */
+label { display: table-cell; } 
+#idInput{
+    width: 30%;
+}
+#descInput{
+    height: 200px;
+    width: 450px;
+}
+
+.ASaveButton{
+    padding:25px 45px 25px 45px;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left:10px;
+    
+    
+}
+
+
+
+
