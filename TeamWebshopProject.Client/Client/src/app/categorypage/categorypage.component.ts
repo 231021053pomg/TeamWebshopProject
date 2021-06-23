@@ -13,11 +13,13 @@ import { Item } from '../models';
 export class CategorypageComponent implements OnInit {
   tags: Tag[] = [];
   products: Item[] = [];
+  showedProducts: Item[] = [];
 
   selectedTag?: Tag;
 
   onSelect(tag: Tag): void {
     this.selectedTag = tag;
+    this.showedProducts = this.products.filter(p => p.tags?.includes(tag));
   }
 
   constructor(private tagService: TagService, private frontpageService: FrontpageService) { }
